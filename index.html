@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary SEO -->
+  <title>aiQlik – Piattaforma AI per Qlik Cloud | Alterbit S.r.l.</title>
+  <meta name="description" content="aiQlik è la piattaforma AI nativa per Qlik Cloud sviluppata da Alterbit. 18 agenti AI specializzati per governance automatica, analisi predittiva e insight in linguaggio naturale." />
+  <meta name="keywords" content="aiQlik, AI per Qlik Cloud, Qlik AI, intelligenza artificiale Qlik, Alterbit, analisi dati AI, governance Qlik, automazione BI" />
+  <meta name="author" content="Alterbit S.r.l." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://aiqlik.com/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aiqlik.com/" />
+  <meta property="og:title" content="aiQlik – Piattaforma AI per Qlik Cloud" />
+  <meta property="og:description" content="18 agenti AI specializzati per automatizzare, ottimizzare e proteggere il tuo ecosistema Qlik Cloud." />
+  <meta property="og:image" content="https://aiqlik.com/assets/og-image.png" />
+  <meta property="og:locale" content="it_IT" />
+  <meta property="og:site_name" content="aiQlik" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://aiqlik.com/" />
+  <meta name="twitter:title" content="aiQlik – Piattaforma AI per Qlik Cloud" />
+  <meta name="twitter:description" content="18 agenti AI specializzati per automatizzare, ottimizzare e proteggere il tuo ecosistema Qlik Cloud." />
+  <meta name="twitter:image" content="https://aiqlik.com/assets/og-image.png" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "aiQlik",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Cloud",
+    "description": "Piattaforma AI con 18 agenti specializzati per la governance e ottimizzazione di Qlik Cloud.",
+    "url": "https://aiqlik.com",
+    "author": {
+      "@type": "Organization",
+      "name": "Alterbit S.r.l.",
+      "url": "https://alterbit.it"
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "description": "14 giorni gratuiti senza carta di credito"
+    }
+  }
+  </script>
+
+  <!-- Google Fonts: Outfit + DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            outfit: ['Outfit', 'sans-serif'],
+            dm:     ['DM Sans', 'sans-serif'],
+          },
+          colors: {
+            teal: {
+              DEFAULT: '#0D9488',
+              light:   '#14B8A6',
+              dark:    '#0F766E',
+              subtle:  '#042f2e',
+            },
+            navy: {
+              DEFAULT: '#0F172A',
+              card:    '#1E293B',
+              border:  '#334155',
+              lighter: '#475569',
+            },
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background-color: #0F172A; color: #f1f5f9; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Outfit', sans-serif; }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #0D9488, #14B8A6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .glow-teal {
+      box-shadow: 0 0 60px rgba(13,148,136,0.20), 0 0 120px rgba(13,148,136,0.08);
+    }
+    .card-hover {
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(13,148,136,0.15);
+      border-color: #0D9488 !important;
+    }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0F172A; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #0D9488; }
+  </style>
+</head>
+
+<body class="antialiased">
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header class="fixed top-0 inset-x-0 z-50 border-b border-navy-border/60 bg-navy/80 backdrop-blur-md" id="site-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center justify-between h-16" aria-label="Navigazione principale">
+
+        <!-- Logo -->
+        <a href="/" class="flex items-center gap-2" aria-label="aiQlik Home">
+          <span class="text-2xl font-outfit font-bold tracking-tight">
+            <span class="text-white">ai</span><span class="text-teal-light">Qlik</span>
+          </span>
+          <span class="hidden sm:inline-block text-xs text-slate-500 font-dm border border-navy-border rounded px-1.5 py-0.5">by Alterbit</span>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300" role="list">
+          <li><a href="#features"     class="hover:text-teal-light transition-colors">Features</a></li>
+          <li><a href="#how-it-works" class="hover:text-teal-light transition-colors">Come funziona</a></li>
+          <li><a href="#use-cases"    class="hover:text-teal-light transition-colors">Use Cases</a></li>
+          <li><a href="#pricing"      class="hover:text-teal-light transition-colors">Pricing</a></li>
+          <li><a href="#contact"      class="hover:text-teal-light transition-colors">Contatti</a></li>
+        </ul>
+
+        <!-- CTA + hamburger -->
+        <div class="flex items-center gap-3">
+          <a href="#contact" class="hidden sm:inline-flex items-center gap-1.5 bg-teal hover:bg-teal-dark text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors">
+            <i class="bi bi-rocket-takeoff-fill text-xs" aria-hidden="true"></i>
+            Richiedi Demo
+          </a>
+          <button type="button" id="menu-btn" class="md:hidden text-slate-300 hover:text-white" aria-label="Apri menu" aria-expanded="false" aria-controls="mobile-menu">
+            <i class="bi bi-list text-2xl" id="menu-icon"></i>
+          </button>
+        </div>
+
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden overflow-hidden max-h-0 transition-all duration-300 ease-in-out" aria-hidden="true">
+        <ul class="py-4 space-y-1 border-t border-navy-border">
+          <li><a href="#features"     class="block px-2 py-2 text-sm text-slate-300 hover:text-teal-light transition-colors">Features</a></li>
+          <li><a href="#how-it-works" class="block px-2 py-2 text-sm text-slate-300 hover:text-teal-light transition-colors">Come funziona</a></li>
+          <li><a href="#use-cases"    class="block px-2 py-2 text-sm text-slate-300 hover:text-teal-light transition-colors">Use Cases</a></li>
+          <li><a href="#pricing"      class="block px-2 py-2 text-sm text-slate-300 hover:text-teal-light transition-colors">Pricing</a></li>
+          <li><a href="#contact"      class="block px-2 py-2 text-sm text-slate-300 hover:text-teal-light transition-colors">Contatti</a></li>
+          <li class="pt-2">
+            <a href="#contact" class="block text-center bg-teal hover:bg-teal-dark text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors">
+              Richiedi Demo
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section id="hero" class="relative pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden" aria-labelledby="hero-heading">
+
+      <!-- Hero background SVG -->
+      <div class="absolute inset-0 -z-20 pointer-events-none" aria-hidden="true">
+        <img src="/images/hero-bg.svg" alt="" class="w-full h-full object-cover opacity-50" />
+      </div>
+
+      <!-- Radial teal glow -->
+      <div class="absolute inset-0 -z-10 pointer-events-none" aria-hidden="true">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] rounded-full blur-[140px]" style="background: radial-gradient(ellipse, rgba(13,148,136,0.18) 0%, transparent 70%);"></div>
+      </div>
+
+      <div class="max-w-4xl mx-auto text-center">
+        <p class="inline-flex items-center gap-2 text-xs font-semibold text-teal-light uppercase tracking-widest bg-teal-subtle border border-teal/30 rounded-full px-4 py-1.5 mb-6">
+          <i class="bi bi-stars" aria-hidden="true"></i> 18 Agenti AI per Qlik Cloud
+        </p>
+
+        <h1 id="hero-heading" class="text-4xl sm:text-5xl lg:text-6xl font-outfit font-extrabold leading-tight tracking-tight text-white mb-6">
+          Trasforma la governance<br class="hidden sm:block" />
+          del tuo <span class="gradient-text">Qlik Cloud</span> con l'AI
+        </h1>
+
+        <p class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-4 font-dm leading-relaxed">
+          aiQlik integra 18 agenti AI specializzati direttamente nel tuo ecosistema Qlik Cloud.
+          Governance automatica, analisi predittiva e insight in linguaggio naturale — operativo in meno di 2 minuti.
+        </p>
+
+        <p class="text-sm text-slate-500 font-dm mb-10">
+          Scelto da oltre <strong class="text-slate-300">50 aziende enterprise</strong> in Italia &nbsp;&middot;&nbsp; Nessuna carta di credito &nbsp;&middot;&nbsp; 14 giorni gratuiti
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#contact" class="inline-flex items-center gap-2 bg-teal hover:bg-teal-dark text-white font-semibold px-7 py-3.5 rounded-xl transition-colors glow-teal">
+            <i class="bi bi-rocket-takeoff-fill" aria-hidden="true"></i>
+            Richiedi una Demo Gratuita
+          </a>
+          <a href="#how-it-works" class="inline-flex items-center gap-2 text-slate-300 hover:text-teal-light font-medium px-7 py-3.5 rounded-xl border border-navy-border hover:border-teal/50 transition-colors">
+            <i class="bi bi-play-circle" aria-hidden="true"></i>
+            Scopri come funziona
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TRUSTED BY ===================== -->
+    <section class="py-10 border-y border-navy-border bg-navy-card" aria-label="Aziende clienti">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p class="text-center text-xs font-dm text-slate-500 uppercase tracking-widest mb-6">Scelto dalle aziende leader in Italia</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+          <div class="flex items-center justify-center border border-navy-border rounded-lg px-4 py-3 hover:border-teal/40 transition-colors"><span class="font-mono text-sm text-slate-500">ACME Corp</span></div>
+          <div class="flex items-center justify-center border border-navy-border rounded-lg px-4 py-3 hover:border-teal/40 transition-colors"><span class="font-mono text-sm text-slate-500">DataGroup</span></div>
+          <div class="flex items-center justify-center border border-navy-border rounded-lg px-4 py-3 hover:border-teal/40 transition-colors"><span class="font-mono text-sm text-slate-500">RetailItalia</span></div>
+          <div class="flex items-center justify-center border border-navy-border rounded-lg px-4 py-3 hover:border-teal/40 transition-colors"><span class="font-mono text-sm text-slate-500">BancaReg.</span></div>
+          <div class="flex items-center justify-center border border-navy-border rounded-lg px-4 py-3 hover:border-teal/40 transition-colors"><span class="font-mono text-sm text-slate-500">IndustriaBI</span></div>
+          <div class="flex items-center justify-center border border-navy-border rounded-lg px-4 py-3 hover:border-teal/40 transition-colors"><span class="font-mono text-sm text-slate-500">LogisticsX</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FEATURES ===================== -->
+    <section id="features" class="py-24 px-4 sm:px-6 lg:px-8" aria-labelledby="features-heading">
+      <div class="max-w-7xl mx-auto">
+
+        <div class="text-center mb-16">
+          <h2 id="features-heading" class="text-3xl sm:text-4xl font-outfit font-bold text-white mb-4">
+            Tutto quello che serve per governare<br class="hidden sm:block" /> Qlik Cloud con l'AI
+          </h2>
+          <p class="text-slate-400 max-w-xl mx-auto">Sei pilastri tecnologici che trasformano il modo in cui la tua organizzazione usa e governa Qlik Cloud.</p>
+        </div>
+
+        <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" role="list">
+
+          <li class="card-hover bg-navy-card border border-navy-border rounded-2xl p-6">
+            <div class="w-12 h-12 bg-teal/10 border border-teal/20 rounded-xl flex items-center justify-center mb-4">
+              <i class="bi bi-chat-left-text-fill text-teal text-xl" aria-hidden="true"></i>
+            </div>
+            <h3 class="text-lg font-outfit font-semibold text-white mb-2">Natural Language Queries</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Interroga qualsiasi app Qlik in italiano o inglese, senza scrivere codice. Il modello AI comprende il contesto aziendale e restituisce risposte precise con citazioni delle sorgenti.</p>
+          </li>
+
+          <li class="card-hover bg-navy-card border border-navy-border rounded-2xl p-6">
+            <div class="w-12 h-12 bg-teal/10 border border-teal/20 rounded-xl flex items-center justify-center mb-4">
+              <i class="bi bi-graph-up-arrow text-teal text-xl" aria-hidden="true"></i>
+            </div>
+            <h3 class="text-lg font-outfit font-semibold text-white mb-2">Analisi Predittiva</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Modelli ML integrati che anticipano trend, anomalie e opportunità nei tuoi dati Qlik. Ricevi avvisi proattivi prima che i problemi impattino i processi aziendali.</p>
+          </li>
+
+          <li class="card-hover bg-navy-card border border-navy-border rounded-2xl p-6">
+            <div class="w-12 h-12 bg-teal/10 border border-teal/20 rounded-xl flex items-center justify-center mb-4">
+              <i class="bi bi-lightning-charge-fill text-teal text-xl" aria-hidden="true"></i>
+            </div>
+            <h3 class="text-lg font-outfit font-semibold text-white mb-2">Automazione Script</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Genera, ottimizza e monitora script di caricamento con AI generativa. Riduci del 60% i tempi di sviluppo ETL ed elimina gli errori nei tuoi processi di reload.</p>
+          </li>
+
+          <li class="card-hover bg-navy-card border border-navy-border rounded-2xl p-6">
+            <div class="w-12 h-12 bg-teal/10 border border-teal/20 rounded-xl flex items-center justify-center mb-4">
+              <i class="bi bi-shield-lock-fill text-teal text-xl" aria-hidden="true"></i>
+            </div>
+            <h3 class="text-lg font-outfit font-semibold text-white mb-2">Sicurezza Enterprise</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Architettura zero-trust con rispetto rigoroso dei permessi Qlik esistenti. Controllo accessi, section access e compliance GDPR/NIS2 gestiti in modo automatico e verificabile.</p>
+          </li>
+
+          <li class="card-hover bg-navy-card border border-navy-border rounded-2xl p-6">
+            <div class="w-12 h-12 bg-teal/10 border border-teal/20 rounded-xl flex items-center justify-center mb-4">
+              <i class="bi bi-diagram-3-fill text-teal text-xl" aria-hidden="true"></i>
+            </div>
+            <h3 class="text-lg font-outfit font-semibold text-white mb-2">Data Lineage Completo</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Traccia il percorso di ogni dato dal sorgente al dashboard con mappa visuale interattiva. Individua impatti, dipendenze e origini di errori in pochi secondi.</p>
+          </li>
+
+          <li class="card-hover bg-navy-card border border-navy-border rounded-2xl p-6">
+            <div class="w-12 h-12 bg-teal/10 border border-teal/20 rounded-xl flex items-center justify-center mb-4">
+              <i class="bi bi-bar-chart-steps text-teal text-xl" aria-hidden="true"></i>
+            </div>
+            <h3 class="text-lg font-outfit font-semibold text-white mb-2">Reporting Avanzato</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Genera report automatici con narrative AI, distribuibili via email o Teams. Trasforma dashboard Qlik in documenti esecutivi comprensibili a tutti i livelli aziendali.</p>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== HOW IT WORKS ===================== -->
+    <section id="how-it-works" class="py-24 px-4 sm:px-6 lg:px-8 bg-navy-card border-y border-navy-border" aria-labelledby="how-heading">
+      <div class="max-w-5xl mx-auto">
+
+        <div class="text-center mb-16">
+          <h2 id="how-heading" class="text-3xl sm:text-4xl font-outfit font-bold text-white mb-4">Operativo in meno di 2 minuti</h2>
+          <p class="text-slate-400 max-w-lg mx-auto">Tre semplici passi per attivare l'intelligenza artificiale sul tuo Qlik Cloud.</p>
+        </div>
+
+        <ol class="relative border-l-2 border-teal/30 space-y-10 ml-4" role="list">
+
+          <li class="ml-10">
+            <span class="absolute -left-4 flex items-center justify-center w-8 h-8 bg-teal rounded-full text-white font-outfit font-bold text-sm shadow-lg" style="box-shadow:0 0 12px rgba(13,148,136,0.4)">1</span>
+            <h3 class="text-xl font-outfit font-semibold text-white mb-2">Connetti il tuo tenant in 60 secondi</h3>
+            <p class="text-slate-400 leading-relaxed">Inserisci le credenziali OAuth del tuo Qlik Cloud. aiQlik analizza automaticamente la struttura delle app, gli spazi di lavoro, i dataset e le permission esistenti — nessuna configurazione manuale.</p>
+          </li>
+
+          <li class="ml-10">
+            <span class="absolute -left-4 flex items-center justify-center w-8 h-8 bg-teal rounded-full text-white font-outfit font-bold text-sm" style="box-shadow:0 0 12px rgba(13,148,136,0.4)">2</span>
+            <h3 class="text-xl font-outfit font-semibold text-white mb-2">Attiva gli agenti AI sul tuo ambiente</h3>
+            <p class="text-slate-400 leading-relaxed">Scegli quali dei 18 agenti specializzati attivare: governance, analytics, security o ottimizzazione. Ogni agente si auto-configura analizzando il tuo tenant e inizia a lavorare in background immediatamente.</p>
+          </li>
+
+          <li class="ml-10">
+            <span class="absolute -left-4 flex items-center justify-center w-8 h-8 bg-teal rounded-full text-white font-outfit font-bold text-sm" style="box-shadow:0 0 12px rgba(13,148,136,0.4)">3</span>
+            <h3 class="text-xl font-outfit font-semibold text-white mb-2">Insight, alert e automazioni dal primo minuto</h3>
+            <p class="text-slate-400 leading-relaxed">Dashboard unificata con KPI di governance, alert in tempo reale e accesso in linguaggio naturale a tutti i tuoi dati. Il tuo team BI risparmia ore ogni settimana, il management ottiene risposte senza attendere report.</p>
+          </li>
+
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== STATISTICHE ===================== -->
+    <section id="stats" class="py-20 px-4 sm:px-6 lg:px-8" style="background: linear-gradient(135deg, #0D9488 0%, #0F766E 50%, #065F5A 100%);" aria-label="Numeri aiQlik">
+      <div class="max-w-5xl mx-auto">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+
+          <div>
+            <p class="text-4xl sm:text-5xl font-outfit font-extrabold text-white leading-none mb-2">18</p>
+            <p class="text-sm font-dm font-medium text-white/70 uppercase tracking-wider">Agenti AI Specializzati</p>
+          </div>
+
+          <div>
+            <p class="text-4xl sm:text-5xl font-outfit font-extrabold text-white leading-none mb-2">&lt;2 min</p>
+            <p class="text-sm font-dm font-medium text-white/70 uppercase tracking-wider">Setup guidato</p>
+          </div>
+
+          <div>
+            <p class="text-4xl sm:text-5xl font-outfit font-extrabold text-white leading-none mb-2">99.9%</p>
+            <p class="text-sm font-dm font-medium text-white/70 uppercase tracking-wider">Uptime garantito</p>
+          </div>
+
+          <div>
+            <p class="text-4xl sm:text-5xl font-outfit font-extrabold text-white leading-none mb-2">50+</p>
+            <p class="text-sm font-dm font-medium text-white/70 uppercase tracking-wider">Aziende Enterprise</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TESTIMONIAL ===================== -->
+    <section id="testimonials" class="py-24 px-4 sm:px-6 lg:px-8" aria-labelledby="testimonials-heading">
+      <div class="max-w-7xl mx-auto">
+
+        <div class="text-center mb-16">
+          <h2 id="testimonials-heading" class="text-3xl sm:text-4xl font-outfit font-bold text-white mb-4">Cosa dicono i nostri clienti</h2>
+          <p class="text-slate-400 max-w-lg mx-auto">Le aziende che hanno già trasformato la governance Qlik con aiQlik.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <article class="card-hover bg-navy-card border border-navy-border rounded-2xl p-6 flex flex-col">
+            <div class="flex gap-1 mb-4" aria-label="5 stelle su 5">
+              <i class="bi bi-star-fill text-yellow-400 text-sm" aria-hidden="true"></i>
+              <i class="bi bi-star-fill text-yellow-400 text-sm" aria-hidden="true"></i>
+              <i class="bi bi-star-fill text-yellow-400 text-sm" aria-hidden="true"></i>
+              <i class="bi bi-star-fill text-yellow-400 text-sm" aria-hidden="true"></i>
+              <i class="bi bi-star-fill text-yellow-400 text-sm" aria-hidden="true"></i>
+            </div>
+            <blockquote class="font-dm text-slate-300 text-sm leading-relaxed flex-1 mb-6">
+              "aiQlik ci ha permesso di ridurre del 70% il tempo dedicato alla governance Qlik. I nostri data engineer si concentrano sul valore di business, non sulla manutenzione del tenant. L'agente Compliance Shield ci ha già evitato due audit critici."
+            </blockquote>
+            <footer class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-teal to-teal-dark flex items-center justify-center font-outfit font-bold text-sm text-white flex-shrink-0" aria-hidden="true">LF</div>
+              <div>
+                <p class="font-outfit font-semibold text-sm text-white">Luca Ferretti</p>
+                <p class="font-dm text-xs text-slate-500">CTO, Gruppo Industriale Nord</p>
+              </div>
+            </footer>
+          </article>
+
+          <article class="card-hover bg-navy-card border border-teal/30 rounded-2xl p-6 flex flex-col relative" style="box-shadow: 0 8px 40px rgba(13,148,136,0.12)">
+            <span class="absolute -top-3 left-6 bg-teal text-white text-xs font-bold px-3 py-1 rounded-full">In evidenza</span>
+            <div class="flex gap-1 mb-4" aria-label="5 stelle su 5">
+              <i class="bi bi-star-fill text-yellow-400 text-sm" aria-hidden="true"></i>
+              <i class="bi bi-star-fill text-yellow-400 text-sm" aria-hidden="true"></i>
+              <i class="bi bi-star-fill text-yellow-400 text-sm" aria-hidden="true"></i>
+              <i class="bi bi-star-fill text-yellow-400 text-sm" aria-hidden="true"></i>
+              <i class="bi bi-star-fill text-yellow-400 text-sm" aria-hidden="true"></i>
+            </div>
+            <blockquote class="font-dm text-slate-300 text-sm leading-relaxed flex-1 mb-6">
+              "Il Natural Language Analyst ha democratizzato l'accesso ai dati in tutta l'organizzazione. Ora il management interroga Qlik autonomamente senza passare dal team BI. Il tempo di risposta ai direttori è sceso da 2 giorni a meno di 5 minuti."
+            </blockquote>
+            <footer class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-teal-light to-teal flex items-center justify-center font-outfit font-bold text-sm text-white flex-shrink-0" aria-hidden="true">CL</div>
+              <div>
+                <p class="font-outfit font-semibold text-sm text-white">Chiara Lombardi</p>
+                <p class="font-dm text-xs text-slate-500">Analytics Manager, Retail Group S.p.A.</p>
+              </div>
+            </footer>
+          </article>
+
+          <article class="card-hover bg-navy-card border border-navy-border rounded-2xl p-6 flex flex-col">
+            <div class="flex gap-1 mb-4" aria-label="5 stelle su 5">
+              <i class="bi bi-star-fill text-yellow-400 text-sm" aria-hidden="true"></i>
+              <i class="bi bi-star-fill text-yellow-400 text-sm" aria-hidden="true"></i>
+              <i class="bi bi-star-fill text-yellow-400 text-sm" aria-hidden="true"></i>
+              <i class="bi bi-star-fill text-yellow-400 text-sm" aria-hidden="true"></i>
+              <i class="bi bi-star-fill text-yellow-400 text-sm" aria-hidden="true"></i>
+            </div>
+            <blockquote class="font-dm text-slate-300 text-sm leading-relaxed flex-1 mb-6">
+              "Avevamo provato altre soluzioni AI per Qlik, ma nessuna si integrava così profondamente con le API native. Con aiQlik abbiamo identificato €120.000 di licenze inutilizzate nel primo mese grazie al Cost Optimizer."
+            </blockquote>
+            <footer class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-slate-500 to-slate-700 flex items-center justify-center font-outfit font-bold text-sm text-white flex-shrink-0" aria-hidden="true">RE</div>
+              <div>
+                <p class="font-outfit font-semibold text-sm text-white">Roberto Esposito</p>
+                <p class="font-dm text-xs text-slate-500">CDO, BancaReg S.p.A.</p>
+              </div>
+            </footer>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== USE CASES ===================== -->
+    <section id="use-cases" class="py-24 px-4 sm:px-6 lg:px-8 bg-navy-card border-y border-navy-border" aria-labelledby="usecases-heading">
+      <div class="max-w-7xl mx-auto">
+
+        <div class="text-center mb-16">
+          <h2 id="usecases-heading" class="text-3xl sm:text-4xl font-outfit font-bold text-white mb-4">Use Cases</h2>
+          <p class="text-slate-400 max-w-lg mx-auto">aiQlik si adatta ai processi di ogni settore.</p>
+        </div>
+
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-6" role="list">
+
+          <li class="card-hover flex gap-4 bg-navy border border-navy-border rounded-2xl p-6">
+            <i class="bi bi-cart4 text-3xl text-teal flex-shrink-0" aria-hidden="true"></i>
+            <div>
+              <h3 class="font-outfit font-semibold text-white mb-1">Retail &amp; E-commerce</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">Previsione della domanda, ottimizzazione degli stock e analisi del comportamento cliente con domande in linguaggio naturale.</p>
+            </div>
+          </li>
+
+          <li class="card-hover flex gap-4 bg-navy border border-navy-border rounded-2xl p-6">
+            <i class="bi bi-bank2 text-3xl text-teal flex-shrink-0" aria-hidden="true"></i>
+            <div>
+              <h3 class="font-outfit font-semibold text-white mb-1">Finance &amp; Banking</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">Analisi del rischio, rilevamento anomalie e reporting regolatorio automatico integrati nel tuo ambiente Qlik.</p>
+            </div>
+          </li>
+
+          <li class="card-hover flex gap-4 bg-navy border border-navy-border rounded-2xl p-6">
+            <i class="bi bi-gear-wide-connected text-3xl text-teal flex-shrink-0" aria-hidden="true"></i>
+            <div>
+              <h3 class="font-outfit font-semibold text-white mb-1">Manufacturing</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">OEE predittivo, manutenzione preventiva e ottimizzazione della supply chain attraverso l'AI applicata ai dati di fabbrica.</p>
+            </div>
+          </li>
+
+          <li class="card-hover flex gap-4 bg-navy border border-navy-border rounded-2xl p-6">
+            <i class="bi bi-hospital text-3xl text-teal flex-shrink-0" aria-hidden="true"></i>
+            <div>
+              <h3 class="font-outfit font-semibold text-white mb-1">Healthcare</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">Analisi dei percorsi di cura, ottimizzazione delle risorse ospedaliere e reportistica clinica in linguaggio comprensibile.</p>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== PRICING ===================== -->
+    <section id="pricing" class="py-24 px-4 sm:px-6 lg:px-8" aria-labelledby="pricing-heading">
+      <div class="max-w-5xl mx-auto text-center">
+
+        <h2 id="pricing-heading" class="text-3xl sm:text-4xl font-outfit font-bold text-white mb-4">Piani pensati per la tua crescita</h2>
+        <p class="text-slate-400 mb-12 max-w-lg mx-auto">Piani flessibili per aziende di ogni dimensione. Tutti includono supporto dedicato Alterbit.</p>
+
+        <ul class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left" role="list">
+
+          <!-- Starter -->
+          <li class="card-hover bg-navy-card border border-navy-border rounded-2xl p-8">
+            <p class="text-sm font-semibold text-slate-400 uppercase tracking-widest mb-2">Starter</p>
+            <p class="text-4xl font-outfit font-bold text-white mb-1">Su richiesta</p>
+            <p class="text-slate-500 text-sm mb-6">Ideale per team BI fino a 10 utenti</p>
+            <ul class="space-y-3 text-sm text-slate-300 mb-8">
+              <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-teal-light" aria-hidden="true"></i> 1 tenant Qlik Cloud</li>
+              <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-teal-light" aria-hidden="true"></i> NL Queries illimitate</li>
+              <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-teal-light" aria-hidden="true"></i> 3 app AI-augmented</li>
+              <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-teal-light" aria-hidden="true"></i> Supporto email</li>
+            </ul>
+            <a href="#contact" class="block text-center border border-teal text-teal-light hover:bg-teal hover:text-white font-semibold py-2.5 rounded-xl transition-colors">Inizia ora</a>
+          </li>
+
+          <!-- Pro (highlight) -->
+          <li class="bg-navy-card border-2 border-teal rounded-2xl p-8 relative" style="box-shadow: 0 8px 40px rgba(13,148,136,0.18)">
+            <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-teal text-white text-xs font-bold px-3 py-1 rounded-full">Più scelto</span>
+            <p class="text-sm font-semibold text-teal-light uppercase tracking-widest mb-2">Professional</p>
+            <p class="text-4xl font-outfit font-bold text-white mb-1">Su richiesta</p>
+            <p class="text-slate-500 text-sm mb-6">Per organizzazioni con più team</p>
+            <ul class="space-y-3 text-sm text-slate-300 mb-8">
+              <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-teal-light" aria-hidden="true"></i> Tenant illimitati</li>
+              <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-teal-light" aria-hidden="true"></i> Analisi predittiva avanzata</li>
+              <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-teal-light" aria-hidden="true"></i> App illimitate</li>
+              <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-teal-light" aria-hidden="true"></i> Supporto prioritario</li>
+              <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-teal-light" aria-hidden="true"></i> Custom model fine-tuning</li>
+            </ul>
+            <a href="#contact" class="block text-center bg-teal hover:bg-teal-dark text-white font-semibold py-2.5 rounded-xl transition-colors">Richiedi Demo</a>
+          </li>
+
+          <!-- Enterprise -->
+          <li class="card-hover bg-navy-card border border-navy-border rounded-2xl p-8">
+            <p class="text-sm font-semibold text-slate-400 uppercase tracking-widest mb-2">Enterprise</p>
+            <p class="text-4xl font-outfit font-bold text-white mb-1">Custom</p>
+            <p class="text-slate-500 text-sm mb-6">Per grandi organizzazioni e gruppi</p>
+            <ul class="space-y-3 text-sm text-slate-300 mb-8">
+              <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-teal-light" aria-hidden="true"></i> Deploy on-premise o VPC</li>
+              <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-teal-light" aria-hidden="true"></i> SLA garantiti</li>
+              <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-teal-light" aria-hidden="true"></i> Integrazione SSO/LDAP</li>
+              <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-teal-light" aria-hidden="true"></i> CSM dedicato Alterbit</li>
+            </ul>
+            <a href="#contact" class="block text-center border border-navy-border text-slate-300 hover:border-teal/50 hover:text-white font-semibold py-2.5 rounded-xl transition-colors">Contattaci</a>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT / CTA ===================== -->
+    <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 bg-navy-card border-t border-navy-border" aria-labelledby="contact-heading">
+      <div class="max-w-2xl mx-auto text-center">
+
+        <h2 id="contact-heading" class="text-3xl sm:text-4xl font-outfit font-bold text-white mb-4">
+          Inizia oggi. Gratis per 14 giorni.
+        </h2>
+        <p class="text-slate-400 mb-2">
+          Parla con un esperto Alterbit. Ti mostriamo aiQlik sul tuo tenant in una demo personalizzata e gratuita.
+        </p>
+        <p class="text-sm text-slate-500 mb-10">Nessuna carta di credito richiesta &middot; Setup guidato in 2 minuti &middot; Supporto dedicato incluso</p>
+
+        <form action="#" method="POST" class="space-y-4 text-left" novalidate>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="name" class="block text-sm font-medium text-slate-300 mb-1">Nome e Cognome <span class="text-teal-light">*</span></label>
+              <input type="text" id="name" name="name" required autocomplete="name"
+                class="w-full bg-navy border border-navy-border rounded-xl px-4 py-3 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-teal transition-colors"
+                placeholder="Mario Rossi" />
+            </div>
+            <div>
+              <label for="company" class="block text-sm font-medium text-slate-300 mb-1">Azienda</label>
+              <input type="text" id="company" name="company" autocomplete="organization"
+                class="w-full bg-navy border border-navy-border rounded-xl px-4 py-3 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-teal transition-colors"
+                placeholder="Acme S.r.l." />
+            </div>
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium text-slate-300 mb-1">Email aziendale <span class="text-teal-light">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email"
+              class="w-full bg-navy border border-navy-border rounded-xl px-4 py-3 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-teal transition-colors"
+              placeholder="mario@azienda.it" />
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-medium text-slate-300 mb-1">Messaggio</label>
+            <textarea id="message" name="message" rows="4"
+              class="w-full bg-navy border border-navy-border rounded-xl px-4 py-3 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-teal transition-colors resize-none"
+              placeholder="Descrivi brevemente il tuo use case Qlik..."></textarea>
+          </div>
+
+          <button type="submit"
+            class="w-full inline-flex items-center justify-center gap-2 bg-teal hover:bg-teal-dark text-white font-semibold px-6 py-3.5 rounded-xl transition-colors glow-teal">
+            <i class="bi bi-send-fill" aria-hidden="true"></i>
+            Invia richiesta
+          </button>
+
+          <p class="text-xs text-slate-600 text-center">
+            Inviando il modulo accetti la nostra
+            <a href="/privacy" class="underline hover:text-slate-400 transition-colors">Privacy Policy</a>.
+            Non condividiamo mai i tuoi dati.
+          </p>
+
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="border-t border-navy-border bg-navy" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+
+        <!-- Brand -->
+        <div class="md:col-span-2">
+          <a href="/" class="inline-flex items-center gap-2 mb-4" aria-label="aiQlik Home">
+            <span class="text-xl font-outfit font-bold"><span class="text-white">ai</span><span class="text-teal-light">Qlik</span></span>
+          </a>
+          <p class="text-slate-500 text-sm leading-relaxed max-w-xs">
+            Piattaforma AI nativa per Qlik Cloud. Sviluppata con <i class="bi bi-heart-fill text-teal text-xs" aria-hidden="true"></i> da
+            <a href="https://alterbit.it" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors">Alterbit S.r.l.</a>
+          </p>
+          <div class="flex items-center gap-4 mt-5">
+            <a href="https://linkedin.com/company/alterbit" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-teal-light transition-colors" aria-label="LinkedIn">
+              <i class="bi bi-linkedin text-xl"></i>
+            </a>
+            <a href="https://twitter.com/alterbit" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-teal-light transition-colors" aria-label="Twitter/X">
+              <i class="bi bi-twitter-x text-xl"></i>
+            </a>
+            <a href="mailto:info@aiqlik.com" class="text-slate-500 hover:text-teal-light transition-colors" aria-label="Email">
+              <i class="bi bi-envelope-fill text-xl"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Product -->
+        <nav aria-label="Link prodotto">
+          <h3 class="text-sm font-outfit font-semibold text-white uppercase tracking-widest mb-4">Prodotto</h3>
+          <ul class="space-y-2 text-sm text-slate-500">
+            <li><a href="#features"     class="hover:text-teal-light transition-colors">Features</a></li>
+            <li><a href="#how-it-works" class="hover:text-teal-light transition-colors">Come funziona</a></li>
+            <li><a href="#use-cases"    class="hover:text-teal-light transition-colors">Use Cases</a></li>
+            <li><a href="#pricing"      class="hover:text-teal-light transition-colors">Pricing</a></li>
+          </ul>
+        </nav>
+
+        <!-- Company -->
+        <nav aria-label="Link azienda">
+          <h3 class="text-sm font-outfit font-semibold text-white uppercase tracking-widest mb-4">Azienda</h3>
+          <ul class="space-y-2 text-sm text-slate-500">
+            <li><a href="https://alterbit.it" target="_blank" rel="noopener noreferrer" class="hover:text-teal-light transition-colors">Alterbit S.r.l.</a></li>
+            <li><a href="/privacy"  class="hover:text-teal-light transition-colors">Privacy Policy</a></li>
+            <li><a href="/cookie"   class="hover:text-teal-light transition-colors">Cookie Policy</a></li>
+            <li><a href="#contact"  class="hover:text-teal-light transition-colors">Contatti</a></li>
+          </ul>
+        </nav>
+
+      </div>
+
+      <div class="border-t border-navy-border pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-600">
+        <p>&copy; <span id="footer-year">2026</span> Alterbit S.r.l. – P.IVA IT00000000000 – Tutti i diritti riservati.</p>
+        <p>aiQlik non è affiliata a Qlik Technologies Inc.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    // Dynamic footer year
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const menuBtn  = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+
+    menuBtn.addEventListener('click', () => {
+      const isOpen = mobileMenu.style.maxHeight && mobileMenu.style.maxHeight !== '0px';
+      if (isOpen) {
+        mobileMenu.style.maxHeight = '0px';
+        mobileMenu.setAttribute('aria-hidden', 'true');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuIcon.className = 'bi bi-list text-2xl';
+      } else {
+        mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+        mobileMenu.setAttribute('aria-hidden', 'false');
+        menuBtn.setAttribute('aria-expanded', 'true');
+        menuIcon.className = 'bi bi-x-lg text-2xl';
+      }
+    });
+
+    // Close mobile menu when a link is clicked
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.style.maxHeight = '0px';
+        mobileMenu.setAttribute('aria-hidden', 'true');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuIcon.className = 'bi bi-list text-2xl';
+      });
+    });
+
+    // Header shadow on scroll
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      header.style.borderBottomColor = window.scrollY > 10
+        ? 'rgba(51,65,85,0.8)'
+        : 'rgba(51,65,85,0.4)';
+    }, { passive: true });
+  </script>
+
+</body>
+</html>

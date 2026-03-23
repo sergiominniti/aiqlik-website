@@ -1,0 +1,204 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <!-- Dot grid pattern -->
+    <pattern id="dotgrid" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <circle cx="30" cy="30" r="1.2" fill="#0D9488" opacity="0.08"/>
+    </pattern>
+
+    <!-- Radial glow gradients -->
+    <radialGradient id="glow-top" cx="50%" cy="0%" r="60%" fx="50%" fy="0%">
+      <stop offset="0%" stop-color="#0D9488" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#0D9488" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-right" cx="100%" cy="30%" r="50%" fx="100%" fy="30%">
+      <stop offset="0%" stop-color="#14B8A6" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#14B8A6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-center" cx="50%" cy="45%" r="40%" fx="50%" fy="45%">
+      <stop offset="0%" stop-color="#0F766E" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#0F766E" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-bl" cx="0%" cy="100%" r="50%" fx="0%" fy="100%">
+      <stop offset="0%" stop-color="#0D9488" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#0D9488" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Base: transparent (overlays dark bg) -->
+  <!-- Dot grid -->
+  <rect width="1920" height="1080" fill="url(#dotgrid)"/>
+
+  <!-- Radial glows -->
+  <rect width="1920" height="1080" fill="url(#glow-top)"/>
+  <rect width="1920" height="1080" fill="url(#glow-right)"/>
+  <rect width="1920" height="1080" fill="url(#glow-center)"/>
+  <rect width="1920" height="1080" fill="url(#glow-bl)"/>
+
+  <!-- === NODE CLUSTER: Top-left === -->
+  <g stroke="#0D9488" fill="none">
+    <line x1="120" y1="140" x2="220" y2="200" stroke-width="0.8" opacity="0.10"/>
+    <line x1="220" y1="200" x2="180" y2="300" stroke-width="0.8" opacity="0.09"/>
+    <line x1="220" y1="200" x2="320" y2="240" stroke-width="0.8" opacity="0.09"/>
+    <line x1="180" y1="300" x2="280" y2="340" stroke-width="0.8" opacity="0.08"/>
+  </g>
+  <circle cx="120" cy="140" r="3.5" fill="#14B8A6" opacity="0.12"/>
+  <circle cx="220" cy="200" r="5"   fill="#0D9488" opacity="0.14"/>
+  <circle cx="180" cy="300" r="3"   fill="#14B8A6" opacity="0.10"/>
+  <circle cx="320" cy="240" r="3"   fill="#14B8A6" opacity="0.10"/>
+  <circle cx="280" cy="340" r="2.5" fill="#5EEAD4" opacity="0.09"/>
+
+  <!-- === NODE CLUSTER: Top-right === -->
+  <g stroke="#0D9488" fill="none">
+    <line x1="1640" y1="100" x2="1760" y2="180" stroke-width="0.8" opacity="0.10"/>
+    <line x1="1760" y1="180" x2="1820" y2="280" stroke-width="0.8" opacity="0.09"/>
+    <line x1="1760" y1="180" x2="1680" y2="270" stroke-width="0.8" opacity="0.09"/>
+    <line x1="1680" y1="270" x2="1580" y2="220" stroke-width="0.8" opacity="0.08"/>
+  </g>
+  <circle cx="1640" cy="100" r="3"   fill="#14B8A6" opacity="0.11"/>
+  <circle cx="1760" cy="180" r="5"   fill="#0D9488" opacity="0.13"/>
+  <circle cx="1820" cy="280" r="3"   fill="#14B8A6" opacity="0.10"/>
+  <circle cx="1680" cy="270" r="2.5" fill="#5EEAD4" opacity="0.09"/>
+  <circle cx="1580" cy="220" r="3"   fill="#14B8A6" opacity="0.09"/>
+
+  <!-- === NODE CLUSTER: Center / Main hub === -->
+  <g stroke="#0F766E" fill="none">
+    <line x1="880" y1="420" x2="960" y2="480" stroke-width="1"   opacity="0.12"/>
+    <line x1="960" y1="480" x2="1040" y2="420" stroke-width="1"   opacity="0.12"/>
+    <line x1="960" y1="480" x2="960"  y2="580" stroke-width="1"   opacity="0.11"/>
+    <line x1="960" y1="580" x2="880"  y2="640" stroke-width="0.9" opacity="0.10"/>
+    <line x1="960" y1="580" x2="1040" y2="640" stroke-width="0.9" opacity="0.10"/>
+    <line x1="880" y1="420" x2="800"  y2="480" stroke-width="0.9" opacity="0.09"/>
+    <line x1="1040" y1="420" x2="1120" y2="480" stroke-width="0.9" opacity="0.09"/>
+  </g>
+  <!-- Concentric rings around hub -->
+  <circle cx="960" cy="480" r="50"  stroke="#0D9488" stroke-width="0.6" fill="none" opacity="0.05"/>
+  <circle cx="960" cy="480" r="90"  stroke="#0D9488" stroke-width="0.5" fill="none" opacity="0.04"/>
+  <circle cx="960" cy="480" r="130" stroke="#0D9488" stroke-width="0.4" fill="none" opacity="0.03"/>
+  <!-- Hub nodes -->
+  <circle cx="880"  cy="420" r="4"   fill="#14B8A6" opacity="0.13"/>
+  <circle cx="960"  cy="480" r="7"   fill="#0F766E" opacity="0.18"/>
+  <circle cx="1040" cy="420" r="4"   fill="#14B8A6" opacity="0.13"/>
+  <circle cx="960"  cy="580" r="5"   fill="#0D9488" opacity="0.14"/>
+  <circle cx="880"  cy="640" r="3"   fill="#14B8A6" opacity="0.11"/>
+  <circle cx="1040" cy="640" r="3"   fill="#14B8A6" opacity="0.11"/>
+  <circle cx="800"  cy="480" r="3.5" fill="#5EEAD4" opacity="0.10"/>
+  <circle cx="1120" cy="480" r="3.5" fill="#5EEAD4" opacity="0.10"/>
+
+  <!-- === NODE CLUSTER: Bottom-left === -->
+  <g stroke="#0D9488" fill="none">
+    <line x1="180" y1="780" x2="300" y2="840" stroke-width="0.8" opacity="0.09"/>
+    <line x1="300" y1="840" x2="260" y2="960" stroke-width="0.8" opacity="0.08"/>
+    <line x1="300" y1="840" x2="420" y2="800" stroke-width="0.8" opacity="0.09"/>
+    <line x1="420" y1="800" x2="500" y2="880" stroke-width="0.7" opacity="0.07"/>
+  </g>
+  <circle cx="180" cy="780" r="3"   fill="#14B8A6" opacity="0.10"/>
+  <circle cx="300" cy="840" r="5"   fill="#0D9488" opacity="0.13"/>
+  <circle cx="260" cy="960" r="2.5" fill="#5EEAD4" opacity="0.08"/>
+  <circle cx="420" cy="800" r="3.5" fill="#14B8A6" opacity="0.11"/>
+  <circle cx="500" cy="880" r="2.5" fill="#5EEAD4" opacity="0.09"/>
+
+  <!-- === NODE CLUSTER: Bottom-right === -->
+  <g stroke="#0D9488" fill="none">
+    <line x1="1600" y1="800" x2="1720" y2="860" stroke-width="0.8" opacity="0.09"/>
+    <line x1="1720" y1="860" x2="1800" y2="960" stroke-width="0.8" opacity="0.08"/>
+    <line x1="1720" y1="860" x2="1660" y2="960" stroke-width="0.7" opacity="0.08"/>
+    <line x1="1600" y1="800" x2="1500" y2="860" stroke-width="0.8" opacity="0.09"/>
+  </g>
+  <circle cx="1600" cy="800" r="4"   fill="#0D9488" opacity="0.12"/>
+  <circle cx="1720" cy="860" r="5"   fill="#0F766E" opacity="0.13"/>
+  <circle cx="1800" cy="960" r="2.5" fill="#5EEAD4" opacity="0.08"/>
+  <circle cx="1660" cy="960" r="2.5" fill="#5EEAD4" opacity="0.09"/>
+  <circle cx="1500" cy="860" r="3"   fill="#14B8A6" opacity="0.10"/>
+
+  <!-- === NODE CLUSTER: Right-center === -->
+  <g stroke="#0D9488" fill="none">
+    <line x1="1700" y1="480" x2="1800" y2="540" stroke-width="0.8" opacity="0.10"/>
+    <line x1="1800" y1="540" x2="1860" y2="440" stroke-width="0.7" opacity="0.09"/>
+    <line x1="1800" y1="540" x2="1820" y2="640" stroke-width="0.7" opacity="0.08"/>
+  </g>
+  <circle cx="1700" cy="480" r="3.5" fill="#14B8A6" opacity="0.11"/>
+  <circle cx="1800" cy="540" r="5"   fill="#0D9488" opacity="0.13"/>
+  <circle cx="1860" cy="440" r="3"   fill="#14B8A6" opacity="0.10"/>
+  <circle cx="1820" cy="640" r="3"   fill="#5EEAD4" opacity="0.09"/>
+
+  <!-- === NODE CLUSTER: Left-center === -->
+  <g stroke="#0D9488" fill="none">
+    <line x1="100" y1="520" x2="200" y2="560" stroke-width="0.8" opacity="0.10"/>
+    <line x1="200" y1="560" x2="160" y2="640" stroke-width="0.7" opacity="0.09"/>
+    <line x1="200" y1="560" x2="280" y2="500" stroke-width="0.7" opacity="0.09"/>
+  </g>
+  <circle cx="100" cy="520" r="3"   fill="#14B8A6" opacity="0.10"/>
+  <circle cx="200" cy="560" r="5"   fill="#0D9488" opacity="0.13"/>
+  <circle cx="160" cy="640" r="2.5" fill="#5EEAD4" opacity="0.09"/>
+  <circle cx="280" cy="500" r="3"   fill="#14B8A6" opacity="0.10"/>
+
+  <!-- === Long inter-cluster connection lines === -->
+  <g stroke="#0D9488" fill="none" opacity="0.05">
+    <line x1="220"  y1="200"  x2="880"  y2="420"  stroke-width="0.6"/>
+    <line x1="1760" y1="180"  x2="1040" y2="420"  stroke-width="0.6"/>
+    <line x1="300"  y1="840"  x2="880"  y2="640"  stroke-width="0.6"/>
+    <line x1="1720" y1="860"  x2="1040" y2="640"  stroke-width="0.6"/>
+    <line x1="200"  y1="560"  x2="800"  y2="480"  stroke-width="0.5"/>
+    <line x1="1800" y1="540"  x2="1120" y2="480"  stroke-width="0.5"/>
+  </g>
+
+  <!-- === Circuit-style right-angle paths === -->
+  <g stroke="#14B8A6" fill="none" stroke-width="0.7" opacity="0.07">
+    <path d="M 400 180 L 400 300 L 560 300"/>
+    <path d="M 1520 200 L 1520 320 L 1360 320"/>
+    <path d="M 360 700 L 360 820 L 520 820"/>
+    <path d="M 1560 700 L 1560 820 L 1400 820"/>
+    <path d="M 700 180 L 700 280 L 840 280"/>
+    <path d="M 1220 180 L 1220 280 L 1080 280"/>
+  </g>
+  <!-- Junction dots on circuits -->
+  <g fill="#14B8A6" opacity="0.09">
+    <circle cx="400" cy="300" r="2"/>
+    <circle cx="1520" cy="320" r="2"/>
+    <circle cx="360"  cy="820" r="2"/>
+    <circle cx="1560" cy="820" r="2"/>
+    <circle cx="700"  cy="280" r="2"/>
+    <circle cx="1220" cy="280" r="2"/>
+  </g>
+
+  <!-- === Hexagon outlines === -->
+  <g stroke="#0D9488" fill="none" stroke-width="0.7" opacity="0.05">
+    <polygon points="480,380 540,345 600,380 600,450 540,485 480,450"/>
+    <polygon points="1320,380 1380,345 1440,380 1440,450 1380,485 1320,450"/>
+    <polygon points="240,600 300,565 360,600 360,670 300,705 240,670"/>
+    <polygon points="1560,560 1620,525 1680,560 1680,630 1620,665 1560,630"/>
+    <polygon points="840,720 900,685 960,720 960,790 900,825 840,790"/>
+  </g>
+
+  <!-- === Curved flow lines === -->
+  <g stroke="#0F766E" fill="none" stroke-width="1" opacity="0.04">
+    <path d="M 100 400 Q 480 200 960 480"/>
+    <path d="M 1820 400 Q 1440 200 960 480"/>
+    <path d="M 200 900 Q 580 700 960 580"/>
+  </g>
+
+  <!-- === Ambient scattered nodes === -->
+  <g fill="#14B8A6">
+    <circle cx="460"  cy="140" r="2"   opacity="0.08"/>
+    <circle cx="760"  cy="100" r="1.5" opacity="0.07"/>
+    <circle cx="1160" cy="120" r="2"   opacity="0.08"/>
+    <circle cx="1400" cy="160" r="1.5" opacity="0.07"/>
+    <circle cx="560"  cy="700" r="2"   opacity="0.07"/>
+    <circle cx="740"  cy="820" r="1.5" opacity="0.06"/>
+    <circle cx="1180" cy="800" r="2"   opacity="0.07"/>
+    <circle cx="1380" cy="740" r="1.5" opacity="0.06"/>
+    <circle cx="640"  cy="340" r="1.5" opacity="0.07"/>
+    <circle cx="1280" cy="340" r="1.5" opacity="0.07"/>
+    <circle cx="440"  cy="500" r="2"   opacity="0.08"/>
+    <circle cx="1480" cy="500" r="2"   opacity="0.08"/>
+  </g>
+  <!-- Thin connections between ambient nodes -->
+  <g stroke="#0D9488" fill="none" stroke-width="0.5" opacity="0.05">
+    <line x1="460" y1="140"  x2="760"  y2="100"/>
+    <line x1="760" y1="100"  x2="1160" y2="120"/>
+    <line x1="560" y1="700"  x2="740"  y2="820"/>
+    <line x1="740" y1="820"  x2="960"  y2="800"/>
+    <line x1="440" y1="500"  x2="480"  y2="450"/>
+    <line x1="1480" y1="500" x2="1440" y2="450"/>
+  </g>
+</svg>
