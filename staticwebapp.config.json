@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json.schemastore.org/staticwebapp.config.json",
+
+  "routes": [
+    { "route": "/index.html",          "redirect": "/",         "statusCode": 301 },
+    { "route": "/pages/features.html", "redirect": "/features", "statusCode": 301 },
+    { "route": "/pages/pricing.html",  "redirect": "/pricing",  "statusCode": 301 },
+    { "route": "/pages/about.html",    "redirect": "/about",    "statusCode": 301 },
+    { "route": "/pages/contact.html",  "redirect": "/contact",  "statusCode": 301 },
+    { "route": "/pages/demo.html",     "redirect": "/demo",     "statusCode": 301 },
+
+    { "route": "/features", "rewrite": "/pages/features.html" },
+    { "route": "/pricing",  "rewrite": "/pages/pricing.html"  },
+    { "route": "/about",    "rewrite": "/pages/about.html"    },
+    { "route": "/contact",  "rewrite": "/pages/contact.html"  },
+    { "route": "/demo",     "rewrite": "/pages/demo.html"     },
+
+    { "route": "/funzionalita", "redirect": "/features", "statusCode": 301 },
+    { "route": "/prezzi",       "redirect": "/pricing",  "statusCode": 301 },
+    { "route": "/contatti",     "redirect": "/contact",  "statusCode": 301 },
+
+    { "route": "/features/", "redirect": "/features", "statusCode": 301 },
+    { "route": "/pricing/",  "redirect": "/pricing",  "statusCode": 301 },
+    { "route": "/about/",    "redirect": "/about",    "statusCode": 301 },
+    { "route": "/contact/",  "redirect": "/contact",  "statusCode": 301 },
+    { "route": "/demo/",     "redirect": "/demo",     "statusCode": 301 },
+
+    {
+      "route": "/images/*",
+      "headers": { "Cache-Control": "public, max-age=31536000, immutable" }
+    },
+    {
+      "route": "/fonts/*",
+      "headers": { "Cache-Control": "public, max-age=31536000, immutable" }
+    },
+    {
+      "route": "/css/*",
+      "headers": { "Cache-Control": "public, max-age=31536000, immutable" }
+    },
+    {
+      "route": "/js/*",
+      "headers": { "Cache-Control": "public, max-age=31536000, immutable" }
+    },
+    {
+      "route": "/*.svg",
+      "headers": { "Cache-Control": "public, max-age=31536000, immutable" }
+    },
+    {
+      "route": "/*.ico",
+      "headers": { "Cache-Control": "public, max-age=31536000, immutable" }
+    },
+    {
+      "route": "/*.png",
+      "headers": { "Cache-Control": "public, max-age=31536000, immutable" }
+    },
+    {
+      "route": "/*.woff2",
+      "headers": { "Cache-Control": "public, max-age=31536000, immutable" }
+    },
+    {
+      "route": "/*.html",
+      "headers": { "Cache-Control": "public, max-age=3600, must-revalidate" }
+    },
+    {
+      "route": "/",
+      "headers": { "Cache-Control": "public, max-age=3600, must-revalidate" }
+    }
+  ],
+
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": [
+      "/images/*",
+      "/fonts/*",
+      "/css/*",
+      "/js/*",
+      "/*.svg",
+      "/*.ico",
+      "/*.png",
+      "/*.jpg",
+      "/*.webp",
+      "/*.woff2",
+      "/*.woff",
+      "/*.json",
+      "/*.xml",
+      "/*.txt"
+    ]
+  },
+
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/index.html",
+      "statusCode": 404
+    }
+  },
+
+  "globalHeaders": {
+    "Strict-Transport-Security":    "max-age=31536000; includeSubDomains; preload",
+    "X-Frame-Options":              "DENY",
+    "X-Content-Type-Options":       "nosniff",
+    "X-XSS-Protection":             "1; mode=block",
+    "Referrer-Policy":              "strict-origin-when-cross-origin",
+    "Permissions-Policy":           "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+    "Content-Security-Policy":      "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests",
+    "Cross-Origin-Opener-Policy":   "same-origin",
+    "Cross-Origin-Resource-Policy": "same-origin"
+  },
+
+  "mimeTypes": {
+    ".svg":   "image/svg+xml",
+    ".webp":  "image/webp",
+    ".woff2": "font/woff2",
+    ".woff":  "font/woff"
+  }
+}
