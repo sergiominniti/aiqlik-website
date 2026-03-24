@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chi Siamo – aiQlik by Alterbit S.r.l.</title>
+  <meta name="description" content="Alterbit S.r.l. è il team dietro aiQlik: esperti italiani di Qlik Cloud, AI e data governance con oltre 10 anni di esperienza." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://aiqlik.com/about" />
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+  <meta name="theme-color" content="#0F172A" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        fontFamily: { outfit: ['Outfit','sans-serif'], dm: ['DM Sans','sans-serif'] },
+        colors: {
+          teal:  { DEFAULT:'#0D9488', light:'#14B8A6', dark:'#0F766E' },
+          navy:  { DEFAULT:'#0F172A', card:'#1E293B', border:'#334155' },
+        }
+      }}
+    }
+  </script>
+  <style>
+    body { font-family:'DM Sans',sans-serif; background:#0F172A; color:#f1f5f9; }
+    h1,h2,h3 { font-family:'Outfit',sans-serif; }
+
+    .teal-gradient-text {
+      background: linear-gradient(135deg, #14B8A6 0%, #0D9488 60%, #0F766E 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .card-hover {
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-3px);
+      border-color: #0D9488;
+      box-shadow: 0 8px 32px rgba(13,148,136,0.12);
+    }
+
+    .stat-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .stat-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(13,148,136,0.15);
+    }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- ── Header ─────────────────────────────────────────────── -->
+  <header class="fixed top-0 inset-x-0 z-50 border-b border-navy-border/60 bg-navy/80 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="/" aria-label="Torna alla homepage aiQlik">
+        <span class="text-2xl font-outfit font-bold"><span class="text-white">ai</span><span class="text-teal-light">Qlik</span></span>
+      </a>
+      <a href="/" class="text-sm text-slate-400 hover:text-teal-light transition-colors flex items-center gap-1.5">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+        Torna alla homepage
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ── 1. Hero ─────────────────────────────────────────── -->
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 text-center" aria-labelledby="hero-heading">
+      <div class="max-w-3xl mx-auto">
+        <span class="inline-block mb-5 px-3.5 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-teal/10 text-teal-light border border-teal/20">
+          Chi Siamo
+        </span>
+        <h1 id="hero-heading" class="text-4xl sm:text-5xl lg:text-6xl font-outfit font-extrabold text-white leading-tight mb-6">
+          Il team italiano<br class="hidden sm:block" /> dietro aiQlik
+        </h1>
+        <p class="text-lg sm:text-xl text-slate-400 leading-relaxed">
+          Siamo <strong class="text-slate-200">Alterbit S.r.l.</strong>, una software house specializzata in Qlik Cloud, data governance e intelligenza artificiale. Costruiamo strumenti che amplificano le capacità dei team BI.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── 2. Mission Strip ────────────────────────────────── -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 border-y border-navy-border" aria-label="La nostra missione">
+      <div class="max-w-3xl mx-auto text-center">
+        <i class="bi bi-quote text-4xl text-teal/40 block mb-4" aria-hidden="true"></i>
+        <blockquote>
+          <p class="text-2xl sm:text-3xl lg:text-4xl font-outfit font-bold leading-snug teal-gradient-text">
+            "La nostra missione è rendere l'AI accessibile a ogni team Qlik, senza complessità e senza compromessi sulla sicurezza."
+          </p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ── 3. Values Grid ──────────────────────────────────── -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8" aria-labelledby="values-heading">
+      <div class="max-w-6xl mx-auto">
+        <h2 id="values-heading" class="text-3xl sm:text-4xl font-outfit font-bold text-white text-center mb-12">
+          I nostri valori
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <!-- Value 1 -->
+          <article class="card-hover bg-navy-card border border-navy-border rounded-2xl p-8">
+            <div class="text-4xl mb-5" aria-hidden="true">🎯</div>
+            <h3 class="text-xl font-outfit font-bold text-white mb-3">Specializzazione profonda</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Siamo focalizzati esclusivamente sull'ecosistema Qlik. Non siamo generalisti: ogni nostra soluzione nasce dalla conoscenza diretta delle sfide reali dei team Qlik Cloud.
+            </p>
+          </article>
+
+          <!-- Value 2 -->
+          <article class="card-hover bg-navy-card border border-navy-border rounded-2xl p-8">
+            <div class="text-4xl mb-5" aria-hidden="true">🤝</div>
+            <h3 class="text-xl font-outfit font-bold text-white mb-3">Partnership, non vendor</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Lavoriamo a stretto contatto con i team dei nostri clienti. Il successo di aiQlik si misura sul ROI che generiamo per le loro organizzazioni.
+            </p>
+          </article>
+
+          <!-- Value 3 -->
+          <article class="card-hover bg-navy-card border border-navy-border rounded-2xl p-8">
+            <div class="text-4xl mb-5" aria-hidden="true">🔐</div>
+            <h3 class="text-xl font-outfit font-bold text-white mb-3">Sicurezza senza compromessi</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Architettura zero-trust, nessuna copia dei dati, conformità GDPR/NIS2 nativa. La fiducia dei nostri clienti è il nostro bene più prezioso.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 4. Team Section ─────────────────────────────────── -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 border-t border-navy-border" aria-labelledby="team-heading">
+      <div class="max-w-6xl mx-auto">
+        <h2 id="team-heading" class="text-3xl sm:text-4xl font-outfit font-bold text-white text-center mb-12">
+          Il team
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+
+          <!-- Team Member 1 -->
+          <article class="card-hover bg-navy-card border border-navy-border rounded-2xl p-8 text-center">
+            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-teal to-teal-dark flex items-center justify-center mx-auto mb-5">
+              <span class="text-white font-outfit font-bold text-xl" aria-hidden="true">SM</span>
+            </div>
+            <h3 class="text-base font-outfit font-bold text-white mb-1">Sergio Minniti</h3>
+            <p class="text-sm text-teal-light font-medium mb-2">CEO &amp; Co-founder</p>
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs bg-teal/10 text-teal-light border border-teal/20">
+              Qlik Luminary
+            </span>
+          </article>
+
+          <!-- Team Member 2 -->
+          <article class="card-hover bg-navy-card border border-navy-border rounded-2xl p-8 text-center">
+            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-teal to-teal-dark flex items-center justify-center mx-auto mb-5">
+              <span class="text-white font-outfit font-bold text-xl" aria-hidden="true">TM</span>
+            </div>
+            <h3 class="text-base font-outfit font-bold text-white mb-1">Team Alterbit</h3>
+            <p class="text-sm text-teal-light font-medium mb-2">Qlik Certified Architects</p>
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs bg-teal/10 text-teal-light border border-teal/20">
+              Certified
+            </span>
+          </article>
+
+          <!-- Team Member 3 -->
+          <article class="card-hover bg-navy-card border border-navy-border rounded-2xl p-8 text-center">
+            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-teal to-teal-dark flex items-center justify-center mx-auto mb-5">
+              <span class="text-white font-outfit font-bold text-xl" aria-hidden="true">AI</span>
+            </div>
+            <h3 class="text-base font-outfit font-bold text-white mb-1">AI Research Team</h3>
+            <p class="text-sm text-teal-light font-medium mb-2">Machine Learning &amp; NLP</p>
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs bg-teal/10 text-teal-light border border-teal/20">
+              Research
+            </span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 5. Numbers Strip ────────────────────────────────── -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-navy-card border-y border-navy-border" aria-label="I nostri numeri">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <div class="stat-card bg-navy border border-navy-border rounded-2xl p-6 text-center">
+            <p class="text-4xl font-outfit font-extrabold teal-gradient-text mb-2">10+</p>
+            <p class="text-sm text-slate-400 leading-snug">anni di esperienza Qlik</p>
+          </div>
+
+          <div class="stat-card bg-navy border border-navy-border rounded-2xl p-6 text-center">
+            <p class="text-4xl font-outfit font-extrabold teal-gradient-text mb-2">50+</p>
+            <p class="text-sm text-slate-400 leading-snug">clienti enterprise</p>
+          </div>
+
+          <div class="stat-card bg-navy border border-navy-border rounded-2xl p-6 text-center">
+            <p class="text-4xl font-outfit font-extrabold teal-gradient-text mb-2">18</p>
+            <p class="text-sm text-slate-400 leading-snug">agenti AI sviluppati</p>
+          </div>
+
+          <div class="stat-card bg-navy border border-navy-border rounded-2xl p-6 text-center">
+            <p class="text-4xl font-outfit font-extrabold teal-gradient-text mb-2">3</p>
+            <p class="text-sm text-slate-400 leading-snug">paesi serviti</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 6. Partners ─────────────────────────────────────── -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8" aria-labelledby="partners-heading">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-navy-card border border-navy-border rounded-2xl p-10 sm:p-14 text-center relative overflow-hidden">
+          <!-- Decorative glow -->
+          <div class="absolute inset-0 bg-gradient-to-br from-teal/5 to-transparent pointer-events-none" aria-hidden="true"></div>
+
+          <div class="relative">
+            <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-teal/10 border border-teal/20 mb-6">
+              <i class="bi bi-patch-check-fill text-2xl text-teal-light" aria-hidden="true"></i>
+            </div>
+            <h2 id="partners-heading" class="text-3xl sm:text-4xl font-outfit font-bold text-white mb-5">
+              Siamo Qlik Partner
+            </h2>
+            <p class="text-slate-400 leading-relaxed max-w-2xl mx-auto">
+              Alterbit è <strong class="text-slate-200">partner certificato Qlik</strong> con competenze avanzate in Qlik Cloud, QlikView e analisi predittiva. Il nostro team include <strong class="text-slate-200">Qlik Luminaries</strong> e architects certificati.
+            </p>
+            <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+              <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-teal/10 text-teal-light border border-teal/20">
+                <i class="bi bi-check-circle-fill mr-1.5" aria-hidden="true"></i>Qlik Cloud Expert
+              </span>
+              <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-teal/10 text-teal-light border border-teal/20">
+                <i class="bi bi-check-circle-fill mr-1.5" aria-hidden="true"></i>Qlik Luminary
+              </span>
+              <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-teal/10 text-teal-light border border-teal/20">
+                <i class="bi bi-check-circle-fill mr-1.5" aria-hidden="true"></i>Certified Architect
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 7. CTA ───────────────────────────────────────────── -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 border-t border-navy-border text-center" aria-labelledby="cta-heading">
+      <div class="max-w-xl mx-auto">
+        <h2 id="cta-heading" class="text-3xl sm:text-4xl font-outfit font-bold text-white mb-4">
+          Vuoi conoscerci?
+        </h2>
+        <p class="text-slate-400 mb-8">
+          Prenota una call con il nostro team: ti raccontiamo come aiQlik può amplificare le capacità del tuo team Qlik.
+        </p>
+        <a
+          href="/#contact"
+          class="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-white text-base transition-all duration-200"
+          style="background: linear-gradient(135deg, #0D9488 0%, #0F766E 100%);"
+          onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(13,148,136,0.35)';"
+          onmouseout="this.style.transform='';this.style.boxShadow='';"
+        >
+          Prenota una call
+          <i class="bi bi-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer class="border-t border-navy-border bg-navy py-6 text-center text-xs text-slate-600">
+    <p>
+      &copy; 2026 Alterbit S.r.l.
+      &nbsp;&middot;&nbsp;
+      <a href="/pages/privacy.html" class="hover:text-slate-400 transition-colors">Privacy Policy</a>
+      &nbsp;&middot;&nbsp;
+      <a href="/pages/cookie.html" class="hover:text-slate-400 transition-colors">Cookie Policy</a>
+    </p>
+  </footer>
+
+</body>
+</html>

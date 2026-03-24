@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prezzi – aiQlik by Alterbit S.r.l.</title>
+  <meta name="description" content="Piani flessibili aiQlik per ogni dimensione aziendale. Starter, Professional ed Enterprise per Qlik Cloud." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://aiqlik.com/pricing" />
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+  <meta name="theme-color" content="#0F172A" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        fontFamily: { outfit: ['Outfit','sans-serif'], dm: ['DM Sans','sans-serif'] },
+        colors: {
+          teal:  { DEFAULT:'#0D9488', light:'#14B8A6', dark:'#0F766E' },
+          navy:  { DEFAULT:'#0F172A', card:'#1E293B', border:'#334155' },
+        }
+      }}
+    }
+  </script>
+  <style>
+    body { font-family:'DM Sans',sans-serif; background:#0F172A; color:#f1f5f9; }
+    h1,h2,h3,h4 { font-family:'Outfit',sans-serif; }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width:6px; }
+    ::-webkit-scrollbar-track { background:#0F172A; }
+    ::-webkit-scrollbar-thumb { background:#334155; border-radius:3px; }
+
+    /* Toggle pill */
+    .toggle-pill {
+      display:inline-flex;
+      background:#1E293B;
+      border:1px solid #334155;
+      border-radius:9999px;
+      padding:4px;
+    }
+    .toggle-pill button {
+      padding:6px 20px;
+      border-radius:9999px;
+      font-size:0.875rem;
+      font-weight:500;
+      transition:all 0.2s;
+      border:none;
+      cursor:pointer;
+    }
+    .toggle-pill button.active {
+      background:#0D9488;
+      color:#fff;
+    }
+    .toggle-pill button:not(.active) {
+      background:transparent;
+      color:#94a3b8;
+    }
+
+    /* Pricing card hover */
+    .pricing-card { transition: transform 0.2s, box-shadow 0.2s; }
+    .pricing-card:hover { transform: translateY(-4px); }
+
+    /* FAQ accordion */
+    details summary { list-style:none; cursor:pointer; }
+    details summary::-webkit-details-marker { display:none; }
+    details summary .chevron { transition: transform 0.25s; }
+    details[open] summary .chevron { transform: rotate(180deg); }
+    details[open] .faq-body { animation: fadeIn 0.2s ease; }
+    @keyframes fadeIn { from { opacity:0; transform:translateY(-4px); } to { opacity:1; transform:translateY(0); } }
+
+    /* Table alternating rows */
+    .compare-table tbody tr:nth-child(even) { background:rgba(30,41,59,0.5); }
+    .compare-table tbody tr:hover { background:rgba(13,148,136,0.06); }
+
+    /* CTA strip gradient */
+    .cta-strip {
+      background: linear-gradient(135deg, #0F766E 0%, #0D9488 50%, #14B8A6 100%);
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- ============================================================
+       FIXED HEADER
+  ============================================================ -->
+  <header class="fixed top-0 left-0 right-0 z-50 border-b border-navy-border bg-navy/95 backdrop-blur-sm">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-0.5 font-outfit font-bold text-xl tracking-tight select-none">
+        <span class="text-white">ai</span><span class="text-teal-light">Qlik</span>
+      </a>
+      <!-- Back link -->
+      <a href="/"
+         class="flex items-center gap-2 text-sm text-slate-400 hover:text-teal-light transition-colors duration-150 font-dm">
+        <i class="bi bi-arrow-left text-base"></i>
+        Torna alla homepage
+      </a>
+    </div>
+  </header>
+
+  <main class="pt-16">
+
+    <!-- ============================================================
+         1. HERO
+    ============================================================ -->
+    <section class="py-20 px-6 text-center">
+      <div class="max-w-2xl mx-auto">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-teal/30 bg-teal/10 mb-8">
+          <span class="w-2 h-2 rounded-full bg-teal-light animate-pulse"></span>
+          <span class="text-xs font-semibold tracking-widest text-teal-light uppercase">Prezzi</span>
+        </div>
+
+        <h1 class="text-4xl md:text-5xl font-outfit font-extrabold text-white leading-tight mb-5">
+          Piani pensati per<br class="hidden sm:block" /> la tua crescita
+        </h1>
+
+        <p class="text-lg text-slate-400 font-dm leading-relaxed max-w-xl mx-auto">
+          Tutti i piani includono supporto dedicato Alterbit e
+          <span class="text-white font-medium">14 giorni di prova gratuita</span>.
+          Nessuna carta di credito.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         2. BILLING TOGGLE
+    ============================================================ -->
+    <div class="flex flex-col items-center gap-3 pb-12 px-6">
+      <div class="toggle-pill" role="group" aria-label="Periodo di fatturazione">
+        <button class="active" aria-pressed="true">Annuale</button>
+        <button aria-pressed="false">Mensile</button>
+      </div>
+      <p class="text-sm font-dm text-teal-light flex items-center gap-1.5">
+        <i class="bi bi-tag-fill text-xs"></i>
+        Risparmia 20% con il piano annuale
+      </p>
+    </div>
+
+    <!-- ============================================================
+         3. PRICING CARDS
+    ============================================================ -->
+    <section class="max-w-6xl mx-auto px-6 pb-20">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+
+        <!-- ---- Starter ---- -->
+        <div class="pricing-card relative rounded-2xl border border-navy-border bg-navy-card p-8 flex flex-col gap-6">
+          <div>
+            <h2 class="text-xl font-outfit font-bold text-white mb-1">Starter</h2>
+            <p class="text-sm text-slate-400 font-dm">Per team BI fino a 10 utenti</p>
+          </div>
+
+          <div class="border-t border-navy-border pt-6">
+            <p class="text-3xl font-outfit font-extrabold text-white">Su richiesta</p>
+            <p class="text-xs text-slate-500 mt-1 font-dm">Prezzo su preventivo personalizzato</p>
+          </div>
+
+          <ul class="flex flex-col gap-3 flex-1">
+            <li class="flex items-start gap-3 text-sm font-dm text-slate-300">
+              <i class="bi bi-check-circle-fill text-teal-light mt-0.5 flex-shrink-0"></i>
+              1 tenant Qlik Cloud
+            </li>
+            <li class="flex items-start gap-3 text-sm font-dm text-slate-300">
+              <i class="bi bi-check-circle-fill text-teal-light mt-0.5 flex-shrink-0"></i>
+              Fino a 5 agenti AI attivi
+            </li>
+            <li class="flex items-start gap-3 text-sm font-dm text-slate-300">
+              <i class="bi bi-check-circle-fill text-teal-light mt-0.5 flex-shrink-0"></i>
+              NL Queries illimitate
+            </li>
+            <li class="flex items-start gap-3 text-sm font-dm text-slate-300">
+              <i class="bi bi-check-circle-fill text-teal-light mt-0.5 flex-shrink-0"></i>
+              3 app AI-augmented
+            </li>
+            <li class="flex items-start gap-3 text-sm font-dm text-slate-300">
+              <i class="bi bi-check-circle-fill text-teal-light mt-0.5 flex-shrink-0"></i>
+              Dashboard governance base
+            </li>
+            <li class="flex items-start gap-3 text-sm font-dm text-slate-300">
+              <i class="bi bi-check-circle-fill text-teal-light mt-0.5 flex-shrink-0"></i>
+              Supporto email (48h)
+            </li>
+          </ul>
+
+          <a href="/#contact"
+             class="mt-2 block text-center py-3 px-6 rounded-xl border-2 border-teal text-teal font-outfit font-semibold text-sm hover:bg-teal hover:text-white transition-all duration-200">
+            Inizia ora
+          </a>
+        </div>
+
+        <!-- ---- Professional (highlighted) ---- -->
+        <div class="pricing-card relative rounded-2xl border-2 border-teal bg-navy-card p-8 flex flex-col gap-6 shadow-[0_0_40px_rgba(13,148,136,0.18)]">
+          <!-- Badge "Più scelto" -->
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+            <span class="inline-flex items-center gap-1.5 px-4 py-1 rounded-full bg-teal text-white text-xs font-outfit font-bold tracking-wide uppercase shadow-lg">
+              <i class="bi bi-star-fill text-[10px]"></i>
+              Più scelto
+            </span>
+          </div>
+
+          <div class="pt-2">
+            <h2 class="text-xl font-outfit font-bold text-white mb-1">Professional</h2>
+            <p class="text-sm text-slate-400 font-dm">Per organizzazioni con più team BI</p>
+          </div>
+
+          <div class="border-t border-navy-border pt-6">
+            <p class="text-3xl font-outfit font-extrabold text-white">Su richiesta</p>
+            <p class="text-xs text-slate-500 mt-1 font-dm">Prezzo su preventivo personalizzato</p>
+          </div>
+
+          <ul class="flex flex-col gap-3 flex-1">
+            <li class="flex items-start gap-3 text-sm font-dm text-slate-300">
+              <i class="bi bi-check-circle-fill text-teal-light mt-0.5 flex-shrink-0"></i>
+              Tenant illimitati
+            </li>
+            <li class="flex items-start gap-3 text-sm font-dm text-slate-300">
+              <i class="bi bi-check-circle-fill text-teal-light mt-0.5 flex-shrink-0"></i>
+              Tutti i 18 agenti AI
+            </li>
+            <li class="flex items-start gap-3 text-sm font-dm text-slate-300">
+              <i class="bi bi-check-circle-fill text-teal-light mt-0.5 flex-shrink-0"></i>
+              Analisi predittiva avanzata
+            </li>
+            <li class="flex items-start gap-3 text-sm font-dm text-slate-300">
+              <i class="bi bi-check-circle-fill text-teal-light mt-0.5 flex-shrink-0"></i>
+              App illimitate
+            </li>
+            <li class="flex items-start gap-3 text-sm font-dm text-slate-300">
+              <i class="bi bi-check-circle-fill text-teal-light mt-0.5 flex-shrink-0"></i>
+              Alert &amp; automazioni
+            </li>
+            <li class="flex items-start gap-3 text-sm font-dm text-slate-300">
+              <i class="bi bi-check-circle-fill text-teal-light mt-0.5 flex-shrink-0"></i>
+              Custom model fine-tuning
+            </li>
+            <li class="flex items-start gap-3 text-sm font-dm text-slate-300">
+              <i class="bi bi-check-circle-fill text-teal-light mt-0.5 flex-shrink-0"></i>
+              Supporto prioritario (4h)
+            </li>
+            <li class="flex items-start gap-3 text-sm font-dm text-slate-300">
+              <i class="bi bi-check-circle-fill text-teal-light mt-0.5 flex-shrink-0"></i>
+              Onboarding dedicato
+            </li>
+          </ul>
+
+          <a href="/#contact"
+             class="mt-2 block text-center py-3 px-6 rounded-xl bg-teal text-white font-outfit font-semibold text-sm hover:bg-teal-dark transition-all duration-200 shadow-md">
+            Richiedi Demo
+          </a>
+        </div>
+
+        <!-- ---- Enterprise ---- -->
+        <div class="pricing-card relative rounded-2xl border border-navy-border bg-navy-card p-8 flex flex-col gap-6">
+          <div>
+            <h2 class="text-xl font-outfit font-bold text-white mb-1">Enterprise</h2>
+            <p class="text-sm text-slate-400 font-dm">Per grandi organizzazioni e gruppi</p>
+          </div>
+
+          <div class="border-t border-navy-border pt-6">
+            <p class="text-3xl font-outfit font-extrabold text-white">Custom</p>
+            <p class="text-xs text-slate-500 mt-1 font-dm">Offerta su misura per la tua organizzazione</p>
+          </div>
+
+          <ul class="flex flex-col gap-3 flex-1">
+            <li class="flex items-start gap-3 text-sm font-dm text-slate-300">
+              <i class="bi bi-check-circle-fill text-teal-light mt-0.5 flex-shrink-0"></i>
+              Tutto di Professional
+            </li>
+            <li class="flex items-start gap-3 text-sm font-dm text-slate-300">
+              <i class="bi bi-check-circle-fill text-teal-light mt-0.5 flex-shrink-0"></i>
+              Deploy on-premise o VPC
+            </li>
+            <li class="flex items-start gap-3 text-sm font-dm text-slate-300">
+              <i class="bi bi-check-circle-fill text-teal-light mt-0.5 flex-shrink-0"></i>
+              SLA garantiti (99.9%)
+            </li>
+            <li class="flex items-start gap-3 text-sm font-dm text-slate-300">
+              <i class="bi bi-check-circle-fill text-teal-light mt-0.5 flex-shrink-0"></i>
+              Integrazione SSO/LDAP/AD
+            </li>
+            <li class="flex items-start gap-3 text-sm font-dm text-slate-300">
+              <i class="bi bi-check-circle-fill text-teal-light mt-0.5 flex-shrink-0"></i>
+              White-label disponibile
+            </li>
+            <li class="flex items-start gap-3 text-sm font-dm text-slate-300">
+              <i class="bi bi-check-circle-fill text-teal-light mt-0.5 flex-shrink-0"></i>
+              CSM dedicato Alterbit
+            </li>
+            <li class="flex items-start gap-3 text-sm font-dm text-slate-300">
+              <i class="bi bi-check-circle-fill text-teal-light mt-0.5 flex-shrink-0"></i>
+              Contratto personalizzato
+            </li>
+          </ul>
+
+          <a href="/#contact"
+             class="mt-2 block text-center py-3 px-6 rounded-xl border-2 border-slate-600 text-slate-300 font-outfit font-semibold text-sm hover:border-slate-400 hover:text-white transition-all duration-200">
+            Contattaci
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         4. FEATURE COMPARISON TABLE
+    ============================================================ -->
+    <section class="max-w-6xl mx-auto px-6 pb-24">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl md:text-3xl font-outfit font-bold text-white mb-3">
+          Confronto funzionalità
+        </h2>
+        <p class="text-slate-400 font-dm text-sm">
+          Una visione completa di cosa include ogni piano.
+        </p>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-navy-border">
+        <table class="compare-table w-full text-sm font-dm">
+          <thead>
+            <tr class="border-b border-navy-border bg-navy-card">
+              <th class="text-left py-4 px-6 font-outfit font-semibold text-slate-300 w-1/3">Funzionalità</th>
+              <th class="text-center py-4 px-4 font-outfit font-semibold text-slate-300">Starter</th>
+              <th class="text-center py-4 px-4 font-outfit font-semibold text-teal-light">
+                <span class="flex flex-col items-center gap-0.5">
+                  Professional
+                  <span class="text-[10px] font-dm font-normal text-teal bg-teal/10 px-2 py-0.5 rounded-full">Più scelto</span>
+                </span>
+              </th>
+              <th class="text-center py-4 px-4 font-outfit font-semibold text-slate-300">Enterprise</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Tenant supportati -->
+            <tr class="border-b border-navy-border/60">
+              <td class="py-4 px-6 text-slate-300">
+                <span class="flex items-center gap-2">
+                  <i class="bi bi-building text-slate-500"></i>
+                  Tenant supportati
+                </span>
+              </td>
+              <td class="py-4 px-4 text-center text-slate-300">1</td>
+              <td class="py-4 px-4 text-center font-medium text-white">Illimitati</td>
+              <td class="py-4 px-4 text-center font-medium text-white">Illimitati</td>
+            </tr>
+            <!-- Agenti AI attivi -->
+            <tr class="border-b border-navy-border/60">
+              <td class="py-4 px-6 text-slate-300">
+                <span class="flex items-center gap-2">
+                  <i class="bi bi-robot text-slate-500"></i>
+                  Agenti AI attivi
+                </span>
+              </td>
+              <td class="py-4 px-4 text-center text-slate-300">Fino a 5</td>
+              <td class="py-4 px-4 text-center font-medium text-white">18 agenti</td>
+              <td class="py-4 px-4 text-center font-medium text-white">18 agenti</td>
+            </tr>
+            <!-- NL Queries -->
+            <tr class="border-b border-navy-border/60">
+              <td class="py-4 px-6 text-slate-300">
+                <span class="flex items-center gap-2">
+                  <i class="bi bi-chat-dots text-slate-500"></i>
+                  NL Queries
+                </span>
+              </td>
+              <td class="py-4 px-4 text-center text-slate-300">Illimitate</td>
+              <td class="py-4 px-4 text-center font-medium text-white">Illimitate</td>
+              <td class="py-4 px-4 text-center font-medium text-white">Illimitate</td>
+            </tr>
+            <!-- Analisi predittiva -->
+            <tr class="border-b border-navy-border/60">
+              <td class="py-4 px-6 text-slate-300">
+                <span class="flex items-center gap-2">
+                  <i class="bi bi-graph-up-arrow text-slate-500"></i>
+                  Analisi predittiva
+                </span>
+              </td>
+              <td class="py-4 px-4 text-center">
+                <i class="bi bi-x-circle text-slate-500 text-base"></i>
+              </td>
+              <td class="py-4 px-4 text-center">
+                <i class="bi bi-check-circle-fill text-teal-light text-base"></i>
+              </td>
+              <td class="py-4 px-4 text-center">
+                <i class="bi bi-check-circle-fill text-teal-light text-base"></i>
+              </td>
+            </tr>
+            <!-- Alert intelligenti -->
+            <tr class="border-b border-navy-border/60">
+              <td class="py-4 px-6 text-slate-300">
+                <span class="flex items-center gap-2">
+                  <i class="bi bi-bell text-slate-500"></i>
+                  Alert intelligenti
+                </span>
+              </td>
+              <td class="py-4 px-4 text-center">
+                <i class="bi bi-x-circle text-slate-500 text-base"></i>
+              </td>
+              <td class="py-4 px-4 text-center">
+                <i class="bi bi-check-circle-fill text-teal-light text-base"></i>
+              </td>
+              <td class="py-4 px-4 text-center">
+                <i class="bi bi-check-circle-fill text-teal-light text-base"></i>
+              </td>
+            </tr>
+            <!-- Supporto SLA -->
+            <tr class="border-b border-navy-border/60">
+              <td class="py-4 px-6 text-slate-300">
+                <span class="flex items-center gap-2">
+                  <i class="bi bi-headset text-slate-500"></i>
+                  Supporto SLA
+                </span>
+              </td>
+              <td class="py-4 px-4 text-center text-slate-300">Email 48h</td>
+              <td class="py-4 px-4 text-center font-medium text-white">Prioritario 4h</td>
+              <td class="py-4 px-4 text-center font-medium text-white">Garantito 99.9%</td>
+            </tr>
+            <!-- Deploy options -->
+            <tr class="border-b border-navy-border/60">
+              <td class="py-4 px-6 text-slate-300">
+                <span class="flex items-center gap-2">
+                  <i class="bi bi-cloud-arrow-up text-slate-500"></i>
+                  Deploy options
+                </span>
+              </td>
+              <td class="py-4 px-4 text-center text-slate-300">Cloud</td>
+              <td class="py-4 px-4 text-center text-slate-300">Cloud</td>
+              <td class="py-4 px-4 text-center font-medium text-white">Cloud · On-premise · VPC</td>
+            </tr>
+            <!-- SSO / LDAP -->
+            <tr>
+              <td class="py-4 px-6 text-slate-300 rounded-bl-2xl">
+                <span class="flex items-center gap-2">
+                  <i class="bi bi-shield-lock text-slate-500"></i>
+                  SSO / LDAP / AD
+                </span>
+              </td>
+              <td class="py-4 px-4 text-center">
+                <i class="bi bi-x-circle text-slate-500 text-base"></i>
+              </td>
+              <td class="py-4 px-4 text-center">
+                <i class="bi bi-x-circle text-slate-500 text-base"></i>
+              </td>
+              <td class="py-4 px-4 text-center rounded-br-2xl">
+                <i class="bi bi-check-circle-fill text-teal-light text-base"></i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         5. FAQ
+    ============================================================ -->
+    <section class="max-w-3xl mx-auto px-6 pb-24">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl md:text-3xl font-outfit font-bold text-white mb-3">
+          Domande frequenti
+        </h2>
+        <p class="text-slate-400 font-dm text-sm">
+          Tutto quello che devi sapere prima di iniziare.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-3">
+
+        <!-- FAQ 1 -->
+        <details class="group rounded-xl border border-navy-border bg-navy-card overflow-hidden">
+          <summary class="flex items-center justify-between gap-4 px-6 py-5 select-none">
+            <span class="font-outfit font-semibold text-white text-base">
+              Posso cambiare piano in seguito?
+            </span>
+            <i class="bi bi-chevron-down chevron text-teal-light flex-shrink-0 text-sm"></i>
+          </summary>
+          <div class="faq-body px-6 pb-5 text-slate-400 font-dm text-sm leading-relaxed border-t border-navy-border pt-4">
+            Sì, puoi upgradare o downgradare in qualsiasi momento senza penali. Le modifiche al piano hanno effetto immediato e la fatturazione viene adeguata proporzionalmente al periodo rimanente.
+          </div>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details class="group rounded-xl border border-navy-border bg-navy-card overflow-hidden">
+          <summary class="flex items-center justify-between gap-4 px-6 py-5 select-none">
+            <span class="font-outfit font-semibold text-white text-base">
+              Come funziona la prova gratuita?
+            </span>
+            <i class="bi bi-chevron-down chevron text-teal-light flex-shrink-0 text-sm"></i>
+          </summary>
+          <div class="faq-body px-6 pb-5 text-slate-400 font-dm text-sm leading-relaxed border-t border-navy-border pt-4">
+            14 giorni con accesso completo al piano Professional, nessuna carta richiesta. Al termine scegli il piano adatto alla tua organizzazione oppure contatta il team Alterbit per un'offerta personalizzata.
+          </div>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details class="group rounded-xl border border-navy-border bg-navy-card overflow-hidden">
+          <summary class="flex items-center justify-between gap-4 px-6 py-5 select-none">
+            <span class="font-outfit font-semibold text-white text-base">
+              I miei dati Qlik restano nel nostro tenant?
+            </span>
+            <i class="bi bi-chevron-down chevron text-teal-light flex-shrink-0 text-sm"></i>
+          </summary>
+          <div class="faq-body px-6 pb-5 text-slate-400 font-dm text-sm leading-relaxed border-t border-navy-border pt-4">
+            Assolutamente sì. aiQlik opera tramite API Qlik senza mai copiare o spostare i tuoi dati. I tuoi dati rimangono esclusivamente nel tuo tenant Qlik Cloud, sotto il pieno controllo della tua organizzazione.
+          </div>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details class="group rounded-xl border border-navy-border bg-navy-card overflow-hidden">
+          <summary class="flex items-center justify-between gap-4 px-6 py-5 select-none">
+            <span class="font-outfit font-semibold text-white text-base">
+              È disponibile supporto in italiano?
+            </span>
+            <i class="bi bi-chevron-down chevron text-teal-light flex-shrink-0 text-sm"></i>
+          </summary>
+          <div class="faq-body px-6 pb-5 text-slate-400 font-dm text-sm leading-relaxed border-t border-navy-border pt-4">
+            Sì, tutto il team Alterbit è italiano e il supporto è disponibile in italiano via email, Teams e telefono. Nessuna barriera linguistica, nessun intermediario.
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         6. CTA STRIP
+    ============================================================ -->
+    <section class="px-6 pb-20">
+      <div class="max-w-4xl mx-auto cta-strip rounded-2xl px-8 py-12 text-center">
+        <p class="text-xs font-outfit font-bold tracking-widest text-white/60 uppercase mb-3">Hai domande?</p>
+        <h2 class="text-2xl md:text-3xl font-outfit font-extrabold text-white mb-4">
+          Parlaci.
+        </h2>
+        <p class="text-white/80 font-dm text-base mb-8 max-w-md mx-auto">
+          Il team Alterbit è a disposizione per guidarti nella scelta del piano più adatto e rispondere a qualsiasi domanda tecnica o commerciale.
+        </p>
+        <a href="/#contact"
+           class="inline-flex items-center gap-2 bg-white text-teal-dark font-outfit font-bold text-sm px-7 py-3.5 rounded-xl hover:bg-slate-50 transition-colors duration-150 shadow-lg">
+          Contatta il team Alterbit
+          <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="border-t border-navy-border bg-navy-card">
+    <div class="max-w-6xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-slate-500 font-dm">
+        &copy; 2026 Alterbit S.r.l. Tutti i diritti riservati.
+      </p>
+      <nav class="flex items-center gap-6 text-sm font-dm">
+        <a href="/privacy" class="text-slate-500 hover:text-teal-light transition-colors duration-150">Privacy Policy</a>
+        <a href="/cookie" class="text-slate-500 hover:text-teal-light transition-colors duration-150">Cookie Policy</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

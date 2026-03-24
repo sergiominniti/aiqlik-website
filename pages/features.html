@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Funzionalità – aiQlik by Alterbit S.r.l.</title>
+  <meta name="description" content="Scopri le 18 funzionalità AI di aiQlik: governance, analytics, sicurezza e ottimizzazione per Qlik Cloud." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://aiqlik.com/features" />
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+  <meta name="theme-color" content="#0F172A" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        fontFamily: { outfit: ['Outfit','sans-serif'], dm: ['DM Sans','sans-serif'] },
+        colors: {
+          teal:  { DEFAULT:'#0D9488', light:'#14B8A6', dark:'#0F766E' },
+          navy:  { DEFAULT:'#0F172A', card:'#1E293B', border:'#334155' },
+        }
+      }}
+    }
+  </script>
+  <style>
+    body { font-family:'DM Sans',sans-serif; background:#0F172A; color:#f1f5f9; }
+    h1,h2,h3 { font-family:'Outfit',sans-serif; }
+
+    .agent-card {
+      background: #1E293B;
+      border: 1px solid #334155;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+    .agent-card:hover {
+      border-color: #0D9488;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(13,148,136,0.12);
+    }
+
+    .badge-governance {
+      background: rgba(13,148,136,0.15);
+      border: 1px solid rgba(13,148,136,0.35);
+      color: #14B8A6;
+    }
+    .badge-analytics {
+      background: rgba(99,102,241,0.15);
+      border: 1px solid rgba(99,102,241,0.35);
+      color: #a5b4fc;
+    }
+    .badge-sicurezza {
+      background: rgba(239,68,68,0.12);
+      border: 1px solid rgba(239,68,68,0.30);
+      color: #fca5a5;
+    }
+    .badge-ottimizzazione {
+      background: rgba(234,179,8,0.12);
+      border: 1px solid rgba(234,179,8,0.30);
+      color: #fde68a;
+    }
+
+    .filter-tab {
+      padding: 0.5rem 1.25rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      border: 1px solid #334155;
+      color: #94a3b8;
+      background: transparent;
+      cursor: default;
+      transition: all 0.15s;
+    }
+    .filter-tab.active {
+      background: #0D9488;
+      border-color: #0D9488;
+      color: #fff;
+    }
+    .filter-tab:not(.active):hover {
+      border-color: #0D9488;
+      color: #14B8A6;
+    }
+
+    .integration-badge {
+      background: #1E293B;
+      border: 1px solid #334155;
+      border-radius: 0.625rem;
+      padding: 0.5rem 1rem;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: #94a3b8;
+      white-space: nowrap;
+    }
+
+    .agent-icon {
+      font-size: 1.75rem;
+      line-height: 1;
+    }
+
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero-animate { animation: fade-up 0.6s ease both; }
+    .hero-animate-delay { animation: fade-up 0.6s ease 0.15s both; }
+    .hero-animate-delay-2 { animation: fade-up 0.6s ease 0.28s both; }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- ===== HEADER ===== -->
+  <header class="fixed top-0 inset-x-0 z-50 border-b border-navy-border/60 bg-navy/80 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="/" aria-label="Torna alla homepage aiQlik">
+        <span class="text-2xl font-outfit font-bold"><span class="text-white">ai</span><span class="text-teal-light">Qlik</span></span>
+      </a>
+      <a href="/" class="text-sm text-slate-400 hover:text-teal-light transition-colors flex items-center gap-1.5">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+        Torna alla homepage
+      </a>
+    </div>
+  </header>
+
+  <main class="pt-24">
+
+    <!-- ===== HERO ===== -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 text-center relative overflow-hidden">
+      <!-- Subtle radial glow -->
+      <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);width:700px;height:420px;background:radial-gradient(ellipse at top,rgba(13,148,136,0.13) 0%,transparent 70%);"></div>
+      </div>
+
+      <div class="relative max-w-3xl mx-auto">
+        <div class="hero-animate inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full border border-teal/30 bg-teal/10 text-teal-light text-xs font-semibold tracking-widest uppercase">
+          <i class="bi bi-cpu-fill" aria-hidden="true"></i>
+          Funzionalità
+        </div>
+
+        <h1 class="hero-animate-delay text-4xl sm:text-5xl lg:text-6xl font-outfit font-bold text-white leading-tight mb-5">
+          18 Agenti AI<br class="hidden sm:block" />
+          <span class="text-teal-light">per ogni esigenza</span>
+        </h1>
+
+        <p class="hero-animate-delay-2 text-lg sm:text-xl text-slate-400 max-w-xl mx-auto leading-relaxed">
+          Ogni agente è uno specialista dedicato — si auto-configura sul tuo tenant e lavora in background, 24/7.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== CATEGORY FILTER TABS ===== -->
+    <section class="pb-10 px-4 sm:px-6 lg:px-8" aria-label="Filtri categoria">
+      <div class="max-w-7xl mx-auto flex flex-wrap gap-3 justify-center">
+        <span class="filter-tab active" aria-current="true">Tutti</span>
+        <span class="filter-tab">Governance</span>
+        <span class="filter-tab">Analytics</span>
+        <span class="filter-tab">Sicurezza</span>
+        <span class="filter-tab">Ottimizzazione</span>
+      </div>
+    </section>
+
+    <!-- ===== AGENT GRID ===== -->
+    <section class="pb-20 px-4 sm:px-6 lg:px-8" aria-label="Elenco agenti AI">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+
+        <!-- 1. DataQuality Agent -->
+        <article class="agent-card">
+          <div class="agent-icon" aria-hidden="true">✅</div>
+          <div>
+            <h2 class="text-base font-outfit font-semibold text-white leading-snug mb-2">DataQuality Agent</h2>
+            <span class="badge-governance inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3">Governance</span>
+            <p class="text-sm text-slate-400 leading-relaxed">Monitora la qualità dei dati in ogni dataset. Rileva valori nulli, duplicati e anomalie statistiche in tempo reale.</p>
+          </div>
+        </article>
+
+        <!-- 2. Lineage Tracer -->
+        <article class="agent-card">
+          <div class="agent-icon" aria-hidden="true">🔍</div>
+          <div>
+            <h2 class="text-base font-outfit font-semibold text-white leading-snug mb-2">Lineage Tracer</h2>
+            <span class="badge-governance inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3">Governance</span>
+            <p class="text-sm text-slate-400 leading-relaxed">Mappa il percorso di ogni dato dal sorgente al dashboard. Identifica impatti e dipendenze in secondi.</p>
+          </div>
+        </article>
+
+        <!-- 3. Access Guardian -->
+        <article class="agent-card">
+          <div class="agent-icon" aria-hidden="true">🛡️</div>
+          <div>
+            <h2 class="text-base font-outfit font-semibold text-white leading-snug mb-2">Access Guardian</h2>
+            <span class="badge-sicurezza inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3">Sicurezza</span>
+            <p class="text-sm text-slate-400 leading-relaxed">Verifica e applica section access e permessi Qlik. Previene accessi non autorizzati automaticamente.</p>
+          </div>
+        </article>
+
+        <!-- 4. Script Optimizer -->
+        <article class="agent-card">
+          <div class="agent-icon" aria-hidden="true">💻</div>
+          <div>
+            <h2 class="text-base font-outfit font-semibold text-white leading-snug mb-2">Script Optimizer</h2>
+            <span class="badge-ottimizzazione inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3">Ottimizzazione</span>
+            <p class="text-sm text-slate-400 leading-relaxed">Analizza e ottimizza script di caricamento dati. Riduce i tempi di reload fino al 60%.</p>
+          </div>
+        </article>
+
+        <!-- 5. NL Analyst -->
+        <article class="agent-card">
+          <div class="agent-icon" aria-hidden="true">💬</div>
+          <div>
+            <h2 class="text-base font-outfit font-semibold text-white leading-snug mb-2">NL Analyst</h2>
+            <span class="badge-analytics inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3">Analytics</span>
+            <p class="text-sm text-slate-400 leading-relaxed">Rispondi a domande sui dati in italiano naturale. Nessun codice, nessuna formazione necessaria.</p>
+          </div>
+        </article>
+
+        <!-- 6. Anomaly Hunter -->
+        <article class="agent-card">
+          <div class="agent-icon" aria-hidden="true">⚠️</div>
+          <div>
+            <h2 class="text-base font-outfit font-semibold text-white leading-snug mb-2">Anomaly Hunter</h2>
+            <span class="badge-analytics inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3">Analytics</span>
+            <p class="text-sm text-slate-400 leading-relaxed">Individua anomalie statistiche e trend insoliti prima che impattino le decisioni aziendali.</p>
+          </div>
+        </article>
+
+        <!-- 7. KPI Advisor -->
+        <article class="agent-card">
+          <div class="agent-icon" aria-hidden="true">📈</div>
+          <div>
+            <h2 class="text-base font-outfit font-semibold text-white leading-snug mb-2">KPI Advisor</h2>
+            <span class="badge-analytics inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3">Analytics</span>
+            <p class="text-sm text-slate-400 leading-relaxed">Suggerisce KPI rilevanti analizzando le tue app Qlik e i pattern di utilizzo del team.</p>
+          </div>
+        </article>
+
+        <!-- 8. Catalog Builder -->
+        <article class="agent-card">
+          <div class="agent-icon" aria-hidden="true">📚</div>
+          <div>
+            <h2 class="text-base font-outfit font-semibold text-white leading-snug mb-2">Catalog Builder</h2>
+            <span class="badge-governance inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3">Governance</span>
+            <p class="text-sm text-slate-400 leading-relaxed">Costruisce automaticamente un catalogo dati con descrizioni, tag e ownership per ogni asset.</p>
+          </div>
+        </article>
+
+        <!-- 9. Compliance Shield -->
+        <article class="agent-card">
+          <div class="agent-icon" aria-hidden="true">⚖️</div>
+          <div>
+            <h2 class="text-base font-outfit font-semibold text-white leading-snug mb-2">Compliance Shield</h2>
+            <span class="badge-sicurezza inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3">Sicurezza</span>
+            <p class="text-sm text-slate-400 leading-relaxed">Verifica conformità GDPR, NIS2 e policy interne. Genera report di audit pronti all'uso.</p>
+          </div>
+        </article>
+
+        <!-- 10. Cost Optimizer -->
+        <article class="agent-card">
+          <div class="agent-icon" aria-hidden="true">💰</div>
+          <div>
+            <h2 class="text-base font-outfit font-semibold text-white leading-snug mb-2">Cost Optimizer</h2>
+            <span class="badge-ottimizzazione inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3">Ottimizzazione</span>
+            <p class="text-sm text-slate-400 leading-relaxed">Analizza l'utilizzo delle licenze Qlik e identifica sprechi e opportunità di risparmio.</p>
+          </div>
+        </article>
+
+        <!-- 11. Alert Manager -->
+        <article class="agent-card">
+          <div class="agent-icon" aria-hidden="true">🔔</div>
+          <div>
+            <h2 class="text-base font-outfit font-semibold text-white leading-snug mb-2">Alert Manager</h2>
+            <span class="badge-governance inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3">Governance</span>
+            <p class="text-sm text-slate-400 leading-relaxed">Configura alert intelligenti su metriche, soglie e anomalie. Notifiche via email e Teams.</p>
+          </div>
+        </article>
+
+        <!-- 12. Reload Scheduler -->
+        <article class="agent-card">
+          <div class="agent-icon" aria-hidden="true">🕐</div>
+          <div>
+            <h2 class="text-base font-outfit font-semibold text-white leading-snug mb-2">Reload Scheduler</h2>
+            <span class="badge-ottimizzazione inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3">Ottimizzazione</span>
+            <p class="text-sm text-slate-400 leading-relaxed">Ottimizza la pianificazione dei reload bilanciando carico e priorità business.</p>
+          </div>
+        </article>
+
+        <!-- 13. User Adoption -->
+        <article class="agent-card">
+          <div class="agent-icon" aria-hidden="true">👥</div>
+          <div>
+            <h2 class="text-base font-outfit font-semibold text-white leading-snug mb-2">User Adoption</h2>
+            <span class="badge-analytics inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3">Analytics</span>
+            <p class="text-sm text-slate-400 leading-relaxed">Analizza l'adozione delle app Qlik nel team. Identifica utenti inattivi e contenuti non utilizzati.</p>
+          </div>
+        </article>
+
+        <!-- 14. Data Profiler -->
+        <article class="agent-card">
+          <div class="agent-icon" aria-hidden="true">📊</div>
+          <div>
+            <h2 class="text-base font-outfit font-semibold text-white leading-snug mb-2">Data Profiler</h2>
+            <span class="badge-analytics inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3">Analytics</span>
+            <p class="text-sm text-slate-400 leading-relaxed">Genera profili statistici completi di ogni campo dati: distribuzione, cardinalità, valori estremi.</p>
+          </div>
+        </article>
+
+        <!-- 15. Dashboard Advisor -->
+        <article class="agent-card">
+          <div class="agent-icon" aria-hidden="true">🎨</div>
+          <div>
+            <h2 class="text-base font-outfit font-semibold text-white leading-snug mb-2">Dashboard Advisor</h2>
+            <span class="badge-analytics inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3">Analytics</span>
+            <p class="text-sm text-slate-400 leading-relaxed">Suggerisce miglioramenti UX e best practice per i tuoi dashboard Qlik basandosi su analytics di utilizzo.</p>
+          </div>
+        </article>
+
+        <!-- 16. Migration Expert -->
+        <article class="agent-card">
+          <div class="agent-icon" aria-hidden="true">🔄</div>
+          <div>
+            <h2 class="text-base font-outfit font-semibold text-white leading-snug mb-2">Migration Expert</h2>
+            <span class="badge-ottimizzazione inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3">Ottimizzazione</span>
+            <p class="text-sm text-slate-400 leading-relaxed">Assiste la migrazione da Qlik Sense desktop a Cloud. Analizza compatibilità e segnala problemi.</p>
+          </div>
+        </article>
+
+        <!-- 17. Security Auditor -->
+        <article class="agent-card">
+          <div class="agent-icon" aria-hidden="true">👁️</div>
+          <div>
+            <h2 class="text-base font-outfit font-semibold text-white leading-snug mb-2">Security Auditor</h2>
+            <span class="badge-sicurezza inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3">Sicurezza</span>
+            <p class="text-sm text-slate-400 leading-relaxed">Esegue audit completi della configurazione di sicurezza del tenant. Produce piani di remediation.</p>
+          </div>
+        </article>
+
+        <!-- 18. Performance Tuner -->
+        <article class="agent-card">
+          <div class="agent-icon" aria-hidden="true">⚡</div>
+          <div>
+            <h2 class="text-base font-outfit font-semibold text-white leading-snug mb-2">Performance Tuner</h2>
+            <span class="badge-ottimizzazione inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3">Ottimizzazione</span>
+            <p class="text-sm text-slate-400 leading-relaxed">Monitora performance delle app e dei reload. Identifica colli di bottiglia e ottimizza le query.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== INTEGRATION BANNER ===== -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 border-y border-navy-border" aria-label="Integrazioni native">
+      <div class="max-w-7xl mx-auto text-center">
+        <p class="text-xs font-semibold tracking-widest uppercase text-slate-500 mb-4">Integrazione nativa</p>
+        <h2 class="text-2xl sm:text-3xl font-outfit font-bold text-white mb-8">
+          Si integra nativamente con <span class="text-teal-light">Qlik Cloud</span>
+        </h2>
+        <div class="flex flex-wrap gap-3 justify-center items-center">
+          <span class="integration-badge">
+            <i class="bi bi-shield-lock-fill text-teal-light mr-1.5" aria-hidden="true"></i>
+            OAuth 2.0
+          </span>
+          <span class="integration-badge">
+            <i class="bi bi-plug-fill text-teal-light mr-1.5" aria-hidden="true"></i>
+            REST API
+          </span>
+          <span class="integration-badge">
+            <i class="bi bi-bar-chart-fill text-teal-light mr-1.5" aria-hidden="true"></i>
+            Qlik Sense
+          </span>
+          <span class="integration-badge">
+            <i class="bi bi-grid-3x3-gap-fill text-teal-light mr-1.5" aria-hidden="true"></i>
+            QMC
+          </span>
+          <span class="integration-badge">
+            <i class="bi bi-collection-fill text-teal-light mr-1.5" aria-hidden="true"></i>
+            Qlik Catalog
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA STRIP ===== -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 text-center" aria-label="Chiamata all'azione">
+      <div class="max-w-2xl mx-auto">
+        <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-teal/15 border border-teal/30 mb-6" aria-hidden="true">
+          <i class="bi bi-rocket-takeoff-fill text-teal-light text-2xl"></i>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-outfit font-bold text-white mb-4">
+          Pronto ad attivare i tuoi agenti?
+        </h2>
+        <p class="text-slate-400 text-lg mb-8">
+          Configura il tuo primo agente in meno di 10 minuti. Nessun codice richiesto.
+        </p>
+        <a
+          href="/#contact"
+          class="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl font-semibold text-white text-base transition-all duration-200"
+          style="background:linear-gradient(135deg,#0D9488,#0F766E);box-shadow:0 4px 24px rgba(13,148,136,0.35);"
+          onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 32px rgba(13,148,136,0.45)';"
+          onmouseout="this.style.transform='';this.style.boxShadow='0 4px 24px rgba(13,148,136,0.35)';"
+        >
+          <i class="bi bi-calendar-check-fill text-lg" aria-hidden="true"></i>
+          Richiedi Demo Gratuita
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="border-t border-navy-border bg-navy py-6 text-center text-xs text-slate-600">
+    <p>
+      &copy; <script>document.write(new Date().getFullYear())</script> Alterbit S.r.l. – Tutti i diritti riservati.
+      &nbsp;&middot;&nbsp;
+      <a href="/privacy" class="hover:text-slate-400 transition-colors">Privacy Policy</a>
+      &nbsp;&middot;&nbsp;
+      <a href="/cookie" class="hover:text-slate-400 transition-colors">Cookie Policy</a>
+    </p>
+  </footer>
+
+</body>
+</html>
