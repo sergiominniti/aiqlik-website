@@ -1,0 +1,64 @@
+# ============================================================
+# .gitignore – aiQlik by Alterbit S.r.l.
+# ============================================================
+
+# ----- OS / Editor -------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+desktop.ini
+
+# JetBrains (WebStorm, IntelliJ)
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+
+# Vim / Emacs
+*.swp
+*.swo
+*~
+\#*\#
+
+# ----- Node (if tooling is added later) ----------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ----- Build outputs -----------------------------------------
+dist/
+build/
+.cache/
+.parcel-cache/
+.turbo/
+
+# ----- Environment & secrets ---------------------------------
+.env
+.env.local
+.env.*.local
+.env.production
+*.pem
+secrets.*
+
+# ----- Netlify local dev -------------------------------------
+.netlify/
+
+# ----- Logs --------------------------------------------------
+*.log
+logs/
+
+# ----- Misc --------------------------------------------------
+*.bak
+*.tmp
+*.orig
+.sass-cache/

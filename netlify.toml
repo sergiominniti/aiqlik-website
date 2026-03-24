@@ -1,0 +1,95 @@
+# ============================================================
+# netlify.toml – aiQlik by Alterbit S.r.l.
+# https://www.aiqlik.com
+# ============================================================
+
+# ----- Build settings ----------------------------------------
+[build]
+  publish = "."          # static site, no build step
+  ignore  = "exit 0"    # always deploy (no build command to check)
+
+# ----- HTTP → HTTPS redirect ---------------------------------
+[[redirects]]
+  from   = "http://aiqlik.com/*"
+  to     = "https://aiqlik.com/:splat"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "http://www.aiqlik.com/*"
+  to     = "https://aiqlik.com/:splat"
+  status = 301
+  force  = true
+
+# Canonical: www → non-www
+[[redirects]]
+  from   = "https://www.aiqlik.com/*"
+  to     = "https://aiqlik.com/:splat"
+  status = 301
+  force  = true
+
+# ----- Clean URLs (strip .html) ------------------------------
+[[redirects]]
+  from   = "/*.html"
+  to     = "/:splat"
+  status = 301
+  force  = false        # let _redirects handle /path → /path.html
+
+# ----- SPA / 404 fallback ------------------------------------
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 404
+
+# ----- Custom HTTP headers -----------------------------------
+
+# Global security headers (all pages)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Prevents clickjacking
+    X-Frame-Options              = "DENY"
+    # Stops MIME-type sniffing
+    X-Content-Type-Options       = "nosniff"
+    # Forces HTTPS for 1 year + subdomains
+    Strict-Transport-Security    = "max-age=31536000; includeSubDomains; preload"
+    # Controls referrer info sent to third parties
+    Referrer-Policy              = "strict-origin-when-cross-origin"
+    # Restricts browser features
+    Permissions-Policy           = "camera=(), microphone=(), geolocation=(), payment=()"
+    # Basic XSS protection (legacy browsers)
+    X-XSS-Protection             = "1; mode=block"
+    # Content Security Policy
+    Content-Security-Policy      = "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+
+# Cache static assets aggressively (1 year)
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# HTML pages: revalidate every hour
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+  for = "/"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
