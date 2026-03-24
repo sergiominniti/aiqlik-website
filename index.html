@@ -52,6 +52,12 @@
   }
   </script>
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-180.png" />
+  <meta name="theme-color" content="#0F172A" />
+
   <!-- Google Fonts: Outfit + DM Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -335,7 +341,8 @@
     </section>
 
     <!-- ===================== STATISTICHE ===================== -->
-    <section id="stats" class="py-20 px-4 sm:px-6 lg:px-8" style="background: linear-gradient(135deg, #0D9488 0%, #0F766E 50%, #065F5A 100%);" aria-label="Numeri aiQlik">
+    <section id="stats" class="py-20 px-4 sm:px-6 lg:px-8" style="background: linear-gradient(135deg, #0D9488 0%, #0F766E 50%, #065F5A 100%);" aria-labelledby="stats-heading">
+      <h2 id="stats-heading" class="sr-only">Numeri aiQlik</h2>
       <div class="max-w-5xl mx-auto">
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
 
@@ -555,14 +562,30 @@
         </p>
         <p class="text-sm text-slate-500 mb-10">Nessuna carta di credito richiesta &middot; Setup guidato in 2 minuti &middot; Supporto dedicato incluso</p>
 
-        <form action="#" method="POST" class="space-y-4 text-left" novalidate>
+        <!-- Netlify Forms: data-netlify="true" abilita la gestione form lato Netlify -->
+        <form
+          id="contact-form"
+          name="demo-request"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          class="space-y-4 text-left"
+          novalidate
+          aria-label="Form richiesta demo"
+        >
+          <!-- Honeypot anti-spam (nascosto) -->
+          <input type="hidden" name="form-name" value="demo-request" />
+          <p class="hidden"><label>Non compilare: <input name="bot-field" /></label></p>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label for="name" class="block text-sm font-medium text-slate-300 mb-1">Nome e Cognome <span class="text-teal-light">*</span></label>
+              <label for="name" class="block text-sm font-medium text-slate-300 mb-1">
+                Nome e Cognome <span class="text-teal-light" aria-hidden="true">*</span>
+              </label>
               <input type="text" id="name" name="name" required autocomplete="name"
                 class="w-full bg-navy border border-navy-border rounded-xl px-4 py-3 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-teal transition-colors"
-                placeholder="Mario Rossi" />
+                placeholder="Mario Rossi"
+                aria-required="true" />
             </div>
             <div>
               <label for="company" class="block text-sm font-medium text-slate-300 mb-1">Azienda</label>
@@ -573,10 +596,13 @@
           </div>
 
           <div>
-            <label for="email" class="block text-sm font-medium text-slate-300 mb-1">Email aziendale <span class="text-teal-light">*</span></label>
+            <label for="email" class="block text-sm font-medium text-slate-300 mb-1">
+              Email aziendale <span class="text-teal-light" aria-hidden="true">*</span>
+            </label>
             <input type="email" id="email" name="email" required autocomplete="email"
               class="w-full bg-navy border border-navy-border rounded-xl px-4 py-3 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-teal transition-colors"
-              placeholder="mario@azienda.it" />
+              placeholder="mario@azienda.it"
+              aria-required="true" />
           </div>
 
           <div>
@@ -586,10 +612,13 @@
               placeholder="Descrivi brevemente il tuo use case Qlik..."></textarea>
           </div>
 
-          <button type="submit"
-            class="w-full inline-flex items-center justify-center gap-2 bg-teal hover:bg-teal-dark text-white font-semibold px-6 py-3.5 rounded-xl transition-colors glow-teal">
+          <!-- Errore validazione -->
+          <div id="form-error" role="alert" aria-live="polite" class="hidden text-sm text-red-400 bg-red-400/10 border border-red-400/20 rounded-xl px-4 py-3"></div>
+
+          <button type="submit" id="form-submit"
+            class="w-full inline-flex items-center justify-center gap-2 bg-teal hover:bg-teal-dark text-white font-semibold px-6 py-3.5 rounded-xl transition-colors glow-teal disabled:opacity-60 disabled:cursor-not-allowed">
             <i class="bi bi-send-fill" aria-hidden="true"></i>
-            Invia richiesta
+            <span id="form-btn-text">Invia richiesta</span>
           </button>
 
           <p class="text-xs text-slate-600 text-center">
@@ -599,6 +628,17 @@
           </p>
 
         </form>
+
+        <!-- Messaggio di successo (inizialmente nascosto) -->
+        <div id="form-success" class="hidden text-center py-8" role="alert" aria-live="polite">
+          <div class="w-16 h-16 bg-teal/10 border border-teal/30 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="bi bi-check2-circle text-teal text-3xl" aria-hidden="true"></i>
+          </div>
+          <h3 class="font-outfit font-bold text-xl text-white mb-2">Richiesta inviata!</h3>
+          <p class="font-dm text-slate-400 text-sm">
+            Il team Alterbit ti contatterà entro 24 ore lavorative per fissare la tua demo gratuita.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -621,13 +661,13 @@
           </p>
           <div class="flex items-center gap-4 mt-5">
             <a href="https://linkedin.com/company/alterbit" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-teal-light transition-colors" aria-label="LinkedIn">
-              <i class="bi bi-linkedin text-xl"></i>
+              <i class="bi bi-linkedin text-xl" aria-hidden="true"></i>
             </a>
             <a href="https://twitter.com/alterbit" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-teal-light transition-colors" aria-label="Twitter/X">
-              <i class="bi bi-twitter-x text-xl"></i>
+              <i class="bi bi-twitter-x text-xl" aria-hidden="true"></i>
             </a>
             <a href="mailto:info@aiqlik.com" class="text-slate-500 hover:text-teal-light transition-colors" aria-label="Email">
-              <i class="bi bi-envelope-fill text-xl"></i>
+              <i class="bi bi-envelope-fill text-xl" aria-hidden="true"></i>
             </a>
           </div>
         </div>
@@ -667,6 +707,52 @@
   <script>
     // Dynamic footer year
     document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+    // ── Contact form: validazione + submit (Netlify Forms) ────────
+    const contactForm  = document.getElementById('contact-form');
+    const formSuccess  = document.getElementById('form-success');
+    const formError    = document.getElementById('form-error');
+    const formSubmit   = document.getElementById('form-submit');
+    const formBtnText  = document.getElementById('form-btn-text');
+
+    function showError(msg) {
+      formError.textContent = msg;
+      formError.classList.remove('hidden');
+      formSubmit.disabled = false;
+      formBtnText.textContent = 'Invia richiesta';
+    }
+
+    function validateEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      formError.classList.add('hidden');
+
+      const name  = contactForm.elements['name'].value.trim();
+      const email = contactForm.elements['email'].value.trim();
+
+      if (!name) { showError('Il campo Nome e Cognome è obbligatorio.'); return; }
+      if (!email) { showError("L'email aziendale è obbligatoria."); return; }
+      if (!validateEmail(email)) { showError('Inserisci un indirizzo email valido.'); return; }
+
+      formSubmit.disabled = true;
+      formBtnText.textContent = 'Invio in corso…';
+
+      try {
+        const data = new FormData(contactForm);
+        const res  = await fetch('/', { method: 'POST', body: data });
+        if (res.ok) {
+          contactForm.classList.add('hidden');
+          formSuccess.classList.remove('hidden');
+        } else {
+          showError('Errore durante l\'invio. Riprova o scrivici a info@aiqlik.com.');
+        }
+      } catch {
+        showError('Impossibile inviare il modulo. Verifica la connessione e riprova.');
+      }
+    });
 
     // Mobile menu toggle
     const menuBtn  = document.getElementById('menu-btn');

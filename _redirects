@@ -10,6 +10,8 @@
 /about          /pages/about.html       200
 /contact        /pages/contact.html     200
 /demo           /pages/demo.html        200
+/privacy        /pages/privacy.html     200
+/cookie         /pages/cookie.html      200
 
 # --- Remove .html extension (permanent redirect) ---
 /pages/features.html    /features       301
@@ -17,6 +19,8 @@
 /pages/about.html       /about          301
 /pages/contact.html     /contact        301
 /pages/demo.html        /demo           301
+/pages/privacy.html     /privacy        301
+/pages/cookie.html      /cookie         301
 
 # --- Trailing slash normalisation ---
 /features/      /features       301
@@ -24,6 +28,8 @@
 /about/         /about          301
 /contact/       /contact        301
 /demo/          /demo           301
+/privacy/       /privacy        301
+/cookie/        /cookie         301
 
 # --- Legacy / alternate slugs ---
 /prezzi         /pricing        301

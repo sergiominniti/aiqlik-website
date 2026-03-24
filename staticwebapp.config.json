@@ -14,6 +14,11 @@
     { "route": "/about",    "rewrite": "/pages/about.html"    },
     { "route": "/contact",  "rewrite": "/pages/contact.html"  },
     { "route": "/demo",     "rewrite": "/pages/demo.html"     },
+    { "route": "/privacy",  "rewrite": "/pages/privacy.html"  },
+    { "route": "/cookie",   "rewrite": "/pages/cookie.html"   },
+
+    { "route": "/pages/privacy.html", "redirect": "/privacy", "statusCode": 301 },
+    { "route": "/pages/cookie.html",  "redirect": "/cookie",  "statusCode": 301 },
 
     { "route": "/funzionalita", "redirect": "/features", "statusCode": 301 },
     { "route": "/prezzi",       "redirect": "/pricing",  "statusCode": 301 },

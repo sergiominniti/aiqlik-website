@@ -1,12 +1,11 @@
 # ============================================================
 # netlify.toml – aiQlik by Alterbit S.r.l.
-# https://www.aiqlik.com
+# https://aiqlik.com
 # ============================================================
 
 # ----- Build settings ----------------------------------------
 [build]
   publish = "."          # static site, no build step
-  ignore  = "exit 0"    # always deploy (no build command to check)
 
 # ----- HTTP → HTTPS redirect ---------------------------------
 [[redirects]]
